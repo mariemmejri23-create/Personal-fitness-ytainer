@@ -690,3 +690,43 @@ with open(os.path.join(ROOT, "preview", "index.html"), "w") as f:
 
 print("Elements:", sum(1 for _ in json.dumps(template).split('"elType"')) - 1)
 print("Wrote elementor/personal-fitness-trainer.json and preview/index.html")
+
+
+# ---------------------------------------------------------------- copy/paste fallback
+# The whole page as one HTML snippet, for an Elementor "HTML" widget or a
+# Gutenberg "Custom HTML" block, when importing the JSON is not possible.
+# Classes are renamed (elementor-* -> pfe-*, e-con -> pft-con) so Elementor's
+# own stylesheets do not interfere, and images point to the GitHub copies.
+import re
+
+
+def standalone(s):
+    s = s.replace("elementor-", "pfe-")
+    s = re.sub(r"\be-con", "pft-con", s)
+    return s.replace("../assets/images/", REPO_RAW)
+
+
+base_css = re.search(r"<style>\n(.*?)</style>", PREVIEW, re.S).group(1).replace("{{", "{").replace("}}", "}")
+base_css = re.sub(r"\*,\*:before,\*:after\{box-sizing:border-box\} body\{margin:0;background:#fff\}",
+                  ".pft-page,.pft-page *,.pft-page *:before,.pft-page *:after{box-sizing:border-box}"
+                  ".pft-page{width:100%;overflow:hidden;background:#fff}", base_css)
+SNIPPET = f"""<!-- Personal Fitness Trainer — page complete a coller dans un widget HTML (Elementor) ou un bloc HTML personnalise -->
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Instrument+Sans:wght@400;500;600;700&display=swap">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
+<style>
+{base_css}
+{re.sub(r"@import[^;]+;", "", CSS)}
+{MEDIA}
+.pft-page a{{text-decoration:none}}
+.pft-page h1,.pft-page h2,.pft-page h3,.pft-page blockquote,.pft-page ul,.pft-page figure{{margin:0;padding:0}}
+.pft-page blockquote{{border:0;quotes:none;font-style:normal;background:none}} .pft-page blockquote:before,.pft-page blockquote:after{{content:none}}
+.pft-page img{{max-width:100%;border:0;box-shadow:none}}
+</style>
+<div class="pft-page">
+{"".join(r_con(c) for c in CONTENT[1:])}
+</div>
+<script>document.querySelectorAll('.pft-page .pfe-tab-title').forEach(function(t){{t.addEventListener('click',function(){{var c=t.nextElementSibling;c.hidden=!c.hidden;}});}});</script>
+"""
+with open(os.path.join(ROOT, "elementor", "page-html-a-coller.html"), "w") as f:
+    f.write(standalone(SNIPPET))
+print("Wrote elementor/page-html-a-coller.html")

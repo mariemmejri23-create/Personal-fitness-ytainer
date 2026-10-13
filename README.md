@@ -47,6 +47,17 @@ Le tout est responsive (desktop, tablette, mobile).
 
 > Si les images n'apparaissent pas après l'import (hébergeur qui bloque les téléchargements externes), importez manuellement le dossier `assets/images/` dans la médiathèque, puis remplacez chaque image dans Elementor.
 
+## Plan B : copier-coller (sans import)
+
+Si l'import du JSON ne fonctionne pas (droits insuffisants, erreur « This source does not support import »…) :
+
+1. Ouvrez [`elementor/page-html-a-coller.html` en version brute](https://raw.githubusercontent.com/mariemmejri23-create/Personal-fitness-ytainer/claude/wordpress-elementor-design-4l07jm/elementor/page-html-a-coller.html), faites **⌘A** puis **⌘C** (Ctrl+A / Ctrl+C sur PC).
+2. Dans Elementor, glissez un widget **HTML** dans la page et collez le code (**⌘V**) dans le champ « Code HTML ».
+3. Sélectionnez le conteneur qui entoure le widget : *Mise en page › Largeur du contenu = Pleine largeur*, et *Avancé › Marge intérieure = 0*.
+4. Réglages de la page (roue dentée) › Mise en page **Elementor Canvas**, puis enregistrez.
+
+Ça marche aussi sans Elementor : bloc **HTML personnalisé** de l'éditeur WordPress. Les textes se modifient directement dans le code (les images sont chargées depuis GitHub).
+
 ## Personnalisation
 
 - **Textes** : cliquez directement sur un texte dans Elementor pour le modifier (tout le contenu est en widgets Titre / Éditeur de texte / Bouton natifs, facilement traduisible en français).
