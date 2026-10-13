@@ -710,7 +710,11 @@ base_css = re.search(r"<style>\n(.*?)</style>", PREVIEW, re.S).group(1).replace(
 base_css = re.sub(r"\*,\*:before,\*:after\{box-sizing:border-box\} body\{margin:0;background:#fff\}",
                   ".pft-page,.pft-page *,.pft-page *:before,.pft-page *:after{box-sizing:border-box}"
                   ".pft-page{width:100%;overflow:hidden;background:#fff}", base_css)
-SNIPPET = f"""<!-- Personal Fitness Trainer — page complete a coller dans un widget HTML (Elementor) ou un bloc HTML personnalise -->
+
+
+def snippet(containers, title):
+    """Self-contained HTML (styles included) for the given top-level containers."""
+    return standalone(f"""<!-- Personal Fitness Trainer — {title} -->
 <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Instrument+Sans:wght@400;500;600;700&display=swap">
 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
 <style>
@@ -723,10 +727,32 @@ SNIPPET = f"""<!-- Personal Fitness Trainer — page complete a coller dans un w
 .pft-page img{{max-width:100%;border:0;box-shadow:none}}
 </style>
 <div class="pft-page">
-{"".join(r_con(c) for c in CONTENT[1:])}
+{"".join(r_con(c) for c in containers)}
 </div>
-<script>document.querySelectorAll('.pft-page .pfe-tab-title').forEach(function(t){{t.addEventListener('click',function(){{var c=t.nextElementSibling;c.hidden=!c.hidden;}});}});</script>
-"""
+<script>document.querySelectorAll('.pft-page .pfe-tab-title').forEach(function(t){{if(t.dataset.pft)return;t.dataset.pft=1;t.addEventListener('click',function(){{var c=t.nextElementSibling;c.hidden=!c.hidden;}});}});</script>
+""")
+
+
 with open(os.path.join(ROOT, "elementor", "page-html-a-coller.html"), "w") as f:
-    f.write(standalone(SNIPPET))
+    f.write(snippet(CONTENT[1:], "page complete a coller dans un widget HTML"))
 print("Wrote elementor/page-html-a-coller.html")
+
+# One block per section, each self-contained, to paste in separate HTML widgets.
+BLOCKS = [
+    ("01-hero", "Hero", [hero]),
+    ("02-chiffres", "Chiffres cles", [stats]),
+    ("03-temoignage", "Temoignage", [testimonial]),
+    ("04-a-propos", "A propos + logos", [about, logos]),
+    ("05-services", "Services", [services]),
+    ("06-etapes", "How it works (etapes)", [process]),
+    ("07-programmes", "Programmes / tarifs", [programs]),
+    ("08-resultats", "Resultats", [results]),
+    ("09-faq", "FAQ", [faq]),
+    ("10-contact", "Contact", [contact]),
+]
+bdir = os.path.join(ROOT, "elementor", "blocs")
+os.makedirs(bdir, exist_ok=True)
+for slug, title, cons in BLOCKS:
+    with open(os.path.join(bdir, slug + ".html"), "w") as f:
+        f.write(snippet(cons, f"bloc {title}"))
+print("Wrote", len(BLOCKS), "blocks in elementor/blocs/")

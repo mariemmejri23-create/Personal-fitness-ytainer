@@ -56,6 +56,8 @@ Si l'import du JSON ne fonctionne pas (droits insuffisants, erreur « This sourc
 3. Sélectionnez le conteneur qui entoure le widget : *Mise en page › Largeur du contenu = Pleine largeur*, et *Avancé › Marge intérieure = 0*.
 4. Réglages de la page (roue dentée) › Mise en page **Elementor Canvas**, puis enregistrez.
 
+Vous préférez une section par widget ? Le dossier [`elementor/blocs/`](elementor/blocs) contient les 10 sections séparées (`01-hero.html` … `10-contact.html`). Chaque bloc est autonome : collez-en un par widget HTML, les uns sous les autres (conteneurs en pleine largeur, marge intérieure et espace entre éléments à 0).
+
 Ça marche aussi sans Elementor : bloc **HTML personnalisé** de l'éditeur WordPress. Les textes se modifient directement dans le code (les images sont chargées depuis GitHub).
 
 ## Personnalisation

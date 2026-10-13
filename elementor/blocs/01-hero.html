@@ -1,0 +1,262 @@
+<!-- Personal Fitness Trainer — bloc Hero -->
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Instrument+Sans:wght@400;500;600;700&display=swap">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
+<style>
+.pft-page,.pft-page *,.pft-page *:before,.pft-page *:after{box-sizing:border-box}.pft-page{width:100%;overflow:hidden;background:#fff}
+.pfe-heading-title{margin:0;padding:0;line-height:1} .pfe-widget{position:relative;min-width:0}
+.pfe-widget-image img{max-width:100%;height:auto;vertical-align:middle}
+.pfe-button{display:inline-block;text-decoration:none;cursor:pointer}
+.pfe-icon{display:inline-block;line-height:1} .pfe-icon i{width:1em;height:1em;position:relative;display:block}
+.pfe-icon-list-items{list-style:none;margin:0;padding:0} .pfe-icon-list-item{display:flex;align-items:center}
+.pfe-icon-list-icon{display:flex}
+.pft-con{max-width:100%} .pfe-tab-title{cursor:pointer;outline:0} .pfe-toggle-icon{float:right;width:1em} .pfe-toggle-title{color:inherit}
+
+/* =========================================================================
+   Personal Fitness Trainer — styles for the Elementor template
+   Every rule is scoped to the .pft-* classes set on the template's
+   containers/widgets, so it does not affect the rest of the site.
+   This file is embedded in the template (first "HTML" widget). You can
+   also paste it in Appearance > Customize > Additional CSS instead.
+   ========================================================================= */
+500;600;700&display=swap');
+
+.pft-section {
+  --pft-orange: #f9652f;
+  --pft-black: #121212;
+  --pft-card-dark: #1c1c1c;
+  --pft-light: #f8f8f8;
+  --pft-text: #121212;
+  --pft-muted: #6f6f6f;
+  --pft-font: 'Instrument Sans', 'Inter', system-ui, sans-serif;
+  font-family: var(--pft-font);
+  color: var(--pft-text);
+  font-size: 15px;
+  line-height: 1.45;
+}
+body .pft-section .pfe-heading-title,
+body .pft-section .pfe-widget-text-editor,
+body .pft-section .pfe-button,
+body .pft-section .pfe-icon-list-text,
+body .pft-section .pfe-toggle-title,
+body .pft-section .pfe-tab-content,
+body .pft-section input,
+body .pft-section textarea,
+body .pft-section button {
+  font-family: var(--pft-font);
+}
+body .pft-section .pfe-heading-title { color: inherit; letter-spacing: -0.04em; }
+body .pft-section .pfe-widget-text-editor { color: inherit; font-size: 15px; line-height: 1.45; }
+body .pft-section .pfe-widget-text-editor p { margin: 0 0 14px; }
+body .pft-section .pfe-widget-text-editor p:last-child { margin-bottom: 0; }
+body .pft-section .pfe-widget-image img { vertical-align: middle; }
+
+/* Style holder (first container): invisible on the live page */
+.pft-styles { padding: 0 !important; min-height: 0 !important; height: 0; overflow: hidden; }
+body.pfe-editor-active .pft-styles { height: auto; min-height: 24px !important; }
+
+/* ---------- Typography helpers ---------- */
+body .pft-section .pft-label .pfe-heading-title { font-size: 14px; font-weight: 400; letter-spacing: 0; color: var(--pft-muted); }
+body .pft-section .pft-h1 .pfe-heading-title { font-size: 64px; font-weight: 400; line-height: 1.04; letter-spacing: -0.05em; color: #fff; }
+body .pft-section .pft-h2 .pfe-heading-title { font-size: 48px; font-weight: 500; line-height: 1.1; }
+body .pft-section .pft-h3 .pfe-heading-title { font-size: 20px; font-weight: 500; line-height: 1.25; letter-spacing: -0.02em; }
+body .pft-section .pft-muted { color: var(--pft-muted); font-size: 14px; }
+body .pft-section .pft-stars .pfe-heading-title { color: #f5b301; font-size: 22px; letter-spacing: 2px; line-height: 1; }
+
+/* ---------- Buttons ---------- */
+body .pft-section .pft-btn .pfe-button {
+  display: inline-flex; align-items: center;
+  background: var(--pft-orange); color: var(--pft-black);
+  font-size: 14px; font-weight: 500; letter-spacing: 0;
+  padding: 4px 4px 4px 24px; border-radius: 8px; border: 1px solid var(--pft-orange);
+  transition: transform .2s ease, box-shadow .2s ease;
+}
+body .pft-section .pft-btn .pfe-button:hover { transform: translateY(-1px); box-shadow: 0 8px 24px rgba(249,101,47,.35); }
+body .pft-section .pft-btn .pfe-button-content-wrapper { display: flex; align-items: center; gap: 24px; flex-direction: row; }
+body .pft-section .pft-btn .pfe-button-text { order: 1; }
+body .pft-section .pft-btn .pfe-button-icon,
+body .pft-section .pft-arrow .pfe-button-icon {
+  order: 2; margin: 0 !important;
+  width: 40px; height: 40px; border-radius: 6px;
+  background: var(--pft-black); color: #fff; fill: #fff;
+  display: inline-flex; align-items: center; justify-content: center; font-size: 15px;
+}
+body .pft-section .pft-btn .pfe-button-icon svg,
+body .pft-section .pft-arrow .pfe-button-icon svg { width: 15px; height: 15px; fill: #fff; }
+body .pft-section .pft-btn--outline .pfe-button { background: #fff; border-color: var(--pft-black); }
+body .pft-section .pft-btn--outline .pfe-button:hover { box-shadow: 0 8px 24px rgba(0,0,0,.12); }
+body .pft-section .pft-btn--block,
+body .pft-section .pft-btn--block .pfe-button { width: 100%; }
+body .pft-section .pft-btn--block .pfe-button-content-wrapper { width: 100%; justify-content: space-between; }
+/* Icon-only square arrow button */
+body .pft-section .pft-arrow .pfe-button { background: transparent; padding: 0; border: 0; line-height: 0; }
+body .pft-section .pft-arrow .pfe-button-text { display: none; }
+
+/* ---------- Hero ---------- */
+body .pft-hero { color: #fff; }
+body .pft-hero .pft-badge .pfe-icon-list-items { display: inline-flex; }
+body .pft-hero .pft-badge .pfe-icon-list-item {
+  background: rgba(18,18,18,.85); border-radius: 999px; padding: 9px 16px; color: #fff; font-size: 14px; gap: 8px;
+}
+body .pft-hero .pft-badge .pfe-icon-list-icon i { color: #fff; font-size: 18px; }
+body .pft-hero .pft-badge .pfe-icon-list-icon svg { fill: #fff; width: 18px; height: 18px; }
+body .pft-hero .pft-badge .pfe-icon-list-text { color: #fff; padding: 0; }
+body .pft-hero .pft-trust-avatars img { width: 88px; height: 44px; object-fit: cover; border-radius: 22px; }
+body .pft-hero .pft-trust-text { font-size: 14px; line-height: 1.5; color: #fff; }
+body .pft-hero .pft-trust-text p { margin: 0 !important; }
+body .pft-hero .pft-trust-text .pft-star { color: #f5b301; }
+body .pft-hero-card { background: var(--pft-orange); border-radius: 16px; color: var(--pft-black); transition: transform .2s ease; }
+body .pft-hero-card:hover { transform: translateY(-2px); }
+body .pft-hero-card .pfe-icon { color: var(--pft-black); font-size: 22px; }
+body .pft-hero-card .pfe-icon svg { fill: var(--pft-black); width: 22px; height: 22px; }
+body .pft-hero-card .pfe-widget-text-editor { font-size: 14px; font-weight: 500; line-height: 1.5; color: var(--pft-black); }
+body .pft-hero .pft-hero-note { font-size: 14px; color: rgba(255,255,255,.85); }
+
+/* ---------- Stats ---------- */
+body .pft-stats .pft-stat-number .pfe-heading-title { font-size: 60px; font-weight: 400; line-height: 1; letter-spacing: -0.04em; }
+body .pft-stats .pft-stat-title .pfe-heading-title { font-size: 20px; font-weight: 500; letter-spacing: -0.02em; }
+body .pft-stats .pft-muted { line-height: 1.5; }
+
+/* ---------- Testimonial ---------- */
+body .pft-testimonial .pft-quote .pfe-heading-title { font-size: 48px; font-weight: 500; line-height: 1.1; letter-spacing: -0.045em; }
+body .pft-section .pft-avatar img { width: 64px; height: 64px; border-radius: 50%; object-fit: cover; }
+body .pft-section .pft-avatar--lg img { width: 72px; height: 72px; }
+body .pft-section .pft-author-name .pfe-heading-title { font-size: 20px; font-weight: 400; letter-spacing: -0.02em; }
+
+/* ---------- About ---------- */
+body .pft-about .pft-about-media { border-radius: 32px; overflow: hidden; }
+body .pft-about .pft-signature img { width: 150px; }
+body .pft-about .pft-value {
+  background: var(--pft-light); border-radius: 24px;
+}
+body .pft-about .pft-value .pfe-icon { color: var(--pft-black); font-size: 24px; }
+body .pft-about .pft-value .pfe-icon svg { width: 24px; height: 24px; }
+body .pft-about .pft-value .pfe-widget-text-editor { font-size: 14px; line-height: 1.5; }
+body .pft-logos .pfe-widget-image img { height: 42px; width: auto; opacity: .75; filter: grayscale(1); }
+
+/* ---------- Services (dark) ---------- */
+body .pft-services { color: #fff; }
+body .pft-services .pft-label .pfe-heading-title { color: #fff; }
+body .pft-services .pft-card {
+  background: var(--pft-card-dark); border-radius: 24px; transition: background .2s ease;
+}
+body .pft-services .pft-card:hover { background: #232323; }
+body .pft-services .pft-card .pfe-icon { color: #fff; font-size: 22px; }
+body .pft-services .pft-card .pfe-icon svg { fill: #fff; width: 22px; height: 22px; }
+body .pft-services .pft-card .pft-card-text { color: rgba(255,255,255,.7); font-size: 14px; line-height: 1.5; }
+body .pft-services .pft-city .pfe-heading-title { font-size: 60px; font-weight: 400; line-height: 1; letter-spacing: -0.05em; }
+body .pft-services .pft-card-img img { width: 100%; height: 100%; object-fit: cover; border-radius: 16px; }
+body .pft-services .pft-card-img,
+body .pft-services .pft-card-img > .pfe-widget-container { height: 100%; }
+body .pft-services .pft-intro { font-size: 16px; line-height: 1.6; max-width: 400px; }
+
+/* ---------- Process ---------- */
+body .pft-process .pft-img img { width: 100%; border-radius: 24px; aspect-ratio: 540 / 412; object-fit: cover; }
+body .pft-process .pft-step-num .pfe-heading-title { font-size: 18px; font-weight: 400; color: var(--pft-muted); letter-spacing: 0; }
+body .pft-process .pft-step-title .pfe-heading-title { font-size: 32px; font-weight: 500; line-height: 1.15; letter-spacing: -0.04em; }
+
+/* ---------- Programs / pricing ---------- */
+body .pft-programs .pft-h2 .pfe-heading-title { font-size: 56px; }
+body .pft-programs .pft-price-card { background: var(--pft-light); border-radius: 32px; position: relative; transition: transform .2s ease, box-shadow .2s ease; }
+body .pft-programs .pft-price-card:hover { transform: translateY(-4px); box-shadow: 0 20px 40px rgba(0,0,0,.08); }
+body .pft-programs .pft-price-card--featured { background: var(--pft-orange); }
+body .pft-programs .pft-price-icon .pfe-icon {
+  width: 40px; height: 40px; border-radius: 8px; background: #fff; color: var(--pft-black);
+  display: inline-flex; align-items: center; justify-content: center; font-size: 17px;
+}
+body .pft-programs .pft-price-icon .pfe-icon svg { width: 17px; height: 17px; }
+body .pft-programs .pft-price-card--featured .pft-price-icon .pfe-icon { background: var(--pft-black); color: #fff; }
+body .pft-programs .pft-price-card--featured .pft-price-icon .pfe-icon svg { fill: #fff; }
+body .pft-programs .pft-popular { position: absolute !important; top: 20px; right: 20px; width: auto !important; }
+body .pft-programs .pft-popular .pfe-heading-title {
+  background: var(--pft-black); color: #fff; font-size: 14px; font-weight: 500; letter-spacing: 0;
+  padding: 9px 12px; border-radius: 6px; line-height: 1;
+}
+body .pft-programs .pft-price .pfe-heading-title { font-size: 40px; font-weight: 700; line-height: 1; letter-spacing: -0.03em; }
+body .pft-programs .pft-price .pfe-heading-title span { font-size: 15px; font-weight: 400; letter-spacing: 0; }
+body .pft-programs .pft-price-desc { min-height: 44px; }
+body .pft-programs .pft-price-card > .pfe-widget-button { margin-top: auto; }
+body .pft-programs .pft-included .pfe-heading-title { font-size: 14px; font-weight: 400; letter-spacing: 0; color: #4a4a4a; }
+body .pft-programs .pft-checks .pfe-icon-list-item { padding: 6px 0 !important; font-size: 14px; }
+body .pft-programs .pft-checks .pfe-icon-list-text { color: #2b2b2b; padding-left: 12px !important; }
+body .pft-programs .pft-checks .pfe-icon-list-icon i { color: var(--pft-black); font-size: 13px; }
+body .pft-programs .pft-checks .pfe-icon-list-icon svg { fill: var(--pft-black); width: 13px; }
+
+/* ---------- Results ---------- */
+body .pft-results .pft-img img { width: 100%; border-radius: 24px; }
+
+/* ---------- FAQ (Toggle widget) ---------- */
+body .pft-faq .pfe-toggle .pfe-tab-title {
+  border: 0; padding: 26px 24px 26px 0; font-size: 15px; font-weight: 500; color: var(--pft-text);
+  border-bottom: 1px solid transparent;
+}
+body .pft-faq .pfe-toggle .pfe-toggle-title { color: var(--pft-text); }
+body .pft-faq .pfe-toggle .pfe-toggle-icon { color: var(--pft-text); }
+body .pft-faq .pfe-toggle .pfe-toggle-icon svg { fill: var(--pft-text); }
+body .pft-faq .pfe-toggle .pfe-tab-content { border: 0; padding: 0 0 26px; color: var(--pft-muted); font-size: 15px; }
+
+/* ---------- Contact ---------- */
+body .pft-contact .pft-contact-card { background: var(--pft-light); border-radius: 24px; transition: background .2s ease; }
+body .pft-contact .pft-contact-card:hover { background: #f1f1f1; }
+body .pft-contact .pft-contact-card .pfe-icon { color: var(--pft-black); font-size: 24px; }
+body .pft-contact .pft-contact-card .pfe-icon svg { width: 24px; height: 24px; }
+body .pft-contact .pft-contact-card .pft-h3 .pfe-heading-title { font-size: 20px; font-weight: 400; }
+body .pft-contact .pft-form-title .pfe-heading-title { font-size: 32px; font-weight: 500; }
+.pft-form { display: flex; flex-direction: column; gap: 20px; }
+.pft-form label { display: block; font-size: 14px; font-weight: 500; margin-bottom: 8px; color: #121212; }
+.pft-form input, .pft-form textarea {
+  width: 100%; border: 0; border-bottom: 1px solid transparent; border-radius: 8px;
+  background: transparent; padding: 14px 16px; font-size: 14px; color: #121212; outline: none;
+  transition: background .2s ease;
+}
+.pft-form input:focus, .pft-form textarea:focus { background: #f8f8f8; }
+.pft-form textarea { min-height: 96px; resize: vertical; border-bottom: 1px solid #e5e5e5; border-radius: 0; }
+.pft-form ::placeholder { color: #8a8a8a; }
+.pft-form button {
+  display: flex; align-items: center; justify-content: space-between; width: 100%;
+  background: #f9652f; color: #121212; border: 0; border-radius: 8px; padding: 4px 4px 4px 24px;
+  font-size: 14px; font-weight: 500; cursor: pointer; margin-top: 4px;
+}
+.pft-form button span.pft-form-arrow {
+  width: 40px; height: 40px; border-radius: 6px; background: #121212; color: #fff;
+  display: inline-flex; align-items: center; justify-content: center;
+}
+/* Same look for Contact Form 7 / WPForms if you replace the HTML form with a shortcode */
+.pft-form-wrap .wpcf7 input:not([type=submit]), .pft-form-wrap .wpcf7 textarea,
+.pft-form-wrap .wpforms-form input, .pft-form-wrap .wpforms-form textarea {
+  width: 100%; border: 0; border-bottom: 1px solid #e5e5e5; border-radius: 0; background: transparent; padding: 14px 16px;
+}
+.pft-form-wrap .wpcf7 input[type=submit], .pft-form-wrap .wpforms-form button[type=submit] {
+  width: 100%; background: #f9652f; color: #121212; border: 0; border-radius: 8px; padding: 14px 24px; font-weight: 500;
+}
+
+/* ---------- Responsive ---------- */
+@media (max-width: 1024px) {
+  body .pft-section .pft-h1 .pfe-heading-title { font-size: 52px; }
+  body .pft-section .pft-h2 .pfe-heading-title,
+  body .pft-programs .pft-h2 .pfe-heading-title,
+  body .pft-testimonial .pft-quote .pfe-heading-title { font-size: 40px; }
+}
+@media (max-width: 767px) {
+  body .pft-section .pft-h1 .pfe-heading-title { font-size: 40px; }
+  body .pft-section .pft-h2 .pfe-heading-title,
+  body .pft-programs .pft-h2 .pfe-heading-title { font-size: 34px; }
+  body .pft-testimonial .pft-quote .pfe-heading-title { font-size: 28px; }
+  body .pft-stats .pft-stat-number .pfe-heading-title,
+  body .pft-services .pft-city .pfe-heading-title { font-size: 44px; }
+  body .pft-process .pft-step-title .pfe-heading-title { font-size: 26px; }
+  body .pft-logos .pfe-widget-image img { height: 30px; }
+  body .pft-section .pft-h1 br { display: none; }
+  body .pft-services .pft-card-img img { max-height: 360px; }
+  body .pft-contact .pft-contact-card { min-height: 180px !important; }
+}
+
+@media(max-width:1024px){.pv-6756397{padding:160px 24px 40px 24px !important;min-height:820px !important}.pv-6756397>.pft-con-inner{flex-direction:column !important;align-items:flex-start !important;justify-content:flex-end !important;gap:32px !important}.pv-65740f9{width:100% !important}.pv-4afb283{padding:72px 24px 72px 24px !important}.pv-4afb283>.pft-con-inner{gap:40px !important}.pv-961cfcb{width:46% !important}.pv-5f06fe1{width:46% !important}.pv-fc3dc70{width:46% !important}.pv-017c690{width:46% !important}.pv-de9dee3{padding:72px 24px 72px 24px !important}.pv-2993cf5{padding:72px 24px 72px 24px !important}.pv-2993cf5>.pft-con-inner{flex-direction:column !important;gap:48px !important}.pv-a6af1ba{width:100% !important;min-height:620px !important}.pv-4493fc1{width:100% !important}.pv-af78c2b{padding:0px 24px 96px 24px !important}.pv-af78c2b>.pft-con-inner{gap:64px !important}.pv-5bb0eca{padding:72px 24px 72px 24px !important}.pv-5bb0eca>.pft-con-inner{flex-direction:column !important;gap:48px !important}.pv-a78f5de{width:100% !important}.pv-52a1b33{width:100% !important}.pv-b0e166a{padding:72px 24px 72px 24px !important}.pv-b0e166a>.pft-con-inner{flex-direction:column !important;gap:48px !important}.pv-b621dad{width:100% !important}.pv-d3b2cd1{width:100% !important}.pv-9175abd{padding:72px 24px 72px 24px !important}.pv-00d65c4{padding:0px 40px 0px 40px !important}.pv-374e4d7{flex-direction:column !important}.pv-2b9d790{width:100% !important}.pv-1e70936{width:100% !important}.pv-048211b{width:100% !important}.pv-5f5539a{padding:72px 24px 72px 24px !important}.pv-5f5539a>.pft-con-inner{flex-direction:column !important;gap:48px !important}.pv-4e37ed9{width:100% !important}.pv-77c171a{width:100% !important}.pv-e091fd4{padding:72px 24px 72px 24px !important}.pv-e091fd4>.pft-con-inner{flex-direction:column !important;gap:48px !important}.pv-574e251{width:100% !important}.pv-e3757b7{width:100% !important}.pv-5a3cd62{padding:72px 24px 72px 24px !important}.pv-4837fb0{flex-direction:column !important}.pv-43e9d08{width:100% !important}.pv-f9717d9{width:100% !important}}@media(max-width:767px){.pv-6756397{padding:140px 20px 32px 20px !important;min-height:720px !important}.pv-65740f9{width:100% !important}.pv-b677335{width:100% !important}.pv-4afb283{padding:56px 20px 56px 20px !important}.pv-4afb283>.pft-con-inner{gap:32px !important}.pv-961cfcb{width:100% !important}.pv-5f06fe1{width:100% !important}.pv-fc3dc70{width:100% !important}.pv-017c690{width:100% !important}.pv-de9dee3{padding:56px 20px 56px 20px !important}.pv-2993cf5{padding:56px 20px 56px 20px !important}.pv-2993cf5>.pft-con-inner{flex-direction:column !important;gap:40px !important}.pv-a6af1ba{width:100% !important;min-height:440px !important}.pv-4493fc1{width:100% !important}.pv-5dae7f6{flex-direction:column !important;gap:12px !important}.pv-2d7a054{width:100% !important}.pv-ea8a9ea{width:100% !important}.pv-84fe394{width:100% !important}.pv-af78c2b{padding:0px 20px 72px 20px !important}.pv-af78c2b>.pft-con-inner{gap:32px !important}.pv-5bb0eca{padding:56px 20px 56px 20px !important}.pv-5bb0eca>.pft-con-inner{flex-direction:column !important;gap:40px !important}.pv-a78f5de{width:100% !important}.pv-52a1b33{width:100% !important}.pv-2382a3e{flex-direction:column !important}.pv-a6ab0df{width:100% !important;min-height:280px !important}.pv-b623aec{width:100% !important}.pv-e729465{flex-direction:column !important}.pv-bad4bb5{width:100% !important}.pv-0e77f8c{width:100% !important}.pv-b0e166a{padding:56px 20px 56px 20px !important}.pv-b0e166a>.pft-con-inner{flex-direction:column !important;gap:40px !important}.pv-b621dad{width:100% !important}.pv-d3b2cd1{width:100% !important;gap:32px !important}.pv-9175abd{padding:56px 20px 56px 20px !important}.pv-00d65c4{padding:0px 0px 0px 0px !important}.pv-374e4d7{flex-direction:column !important}.pv-2b9d790{width:100% !important}.pv-1e70936{width:100% !important}.pv-048211b{width:100% !important}.pv-5f5539a{padding:56px 20px 56px 20px !important}.pv-5f5539a>.pft-con-inner{flex-direction:column !important;gap:40px !important}.pv-4e37ed9{width:100% !important}.pv-77c171a{width:100% !important}.pv-e091fd4{padding:56px 20px 56px 20px !important}.pv-e091fd4>.pft-con-inner{flex-direction:column !important;gap:40px !important}.pv-574e251{width:100% !important}.pv-e3757b7{width:100% !important}.pv-5a3cd62{padding:56px 20px 56px 20px !important}.pv-4837fb0{flex-direction:column !important}.pv-43e9d08{width:100% !important}.pv-f9717d9{width:100% !important}}
+.pft-page a{text-decoration:none}
+.pft-page h1,.pft-page h2,.pft-page h3,.pft-page blockquote,.pft-page ul,.pft-page figure{margin:0;padding:0}
+.pft-page blockquote{border:0;quotes:none;font-style:normal;background:none} .pft-page blockquote:before,.pft-page blockquote:after{content:none}
+.pft-page img{max-width:100%;border:0;box-shadow:none}
+</style>
+<div class="pft-page">
+<div id="top" class="pft-con pv-6756397 pft-section pft-hero" style="padding:160px 0px 40px 0px;position:relative;min-height:900px;background:url(https://raw.githubusercontent.com/mariemmejri23-create/Personal-fitness-ytainer/claude/wordpress-elementor-design-4l07jm/assets/images/hero-bg.jpg) center/cover no-repeat;display:flex;"><div style="position:absolute;inset:0;background:linear-gradient(180deg,rgba(0,0,0,0) 45%,rgba(0,0,0,.78) 100%);pointer-events:none"></div><div class="pft-con-inner" style="display:flex;flex-direction:row;gap:24px;align-items:flex-end;justify-content:space-between;flex-wrap:wrap;width:100%;max-width:1120px;margin:0 auto;position:relative"><div class="pft-con pv-65740f9 " style="padding:0px 0px 0px 0px;position:relative;width:62%;max-width:100%;flex-shrink:0;display:flex;flex-direction:column;gap:24px;align-items:flex-start;justify-content:flex-start;flex-wrap:nowrap;"><div class="pfe-element pfe-widget pfe-widget-icon-list pft-badge" style=""><div class="pfe-widget-container"><ul class="pfe-icon-list-items"><li class="pfe-icon-list-item"><span class="pfe-icon-list-icon"><i class="fas fa-shield-alt" aria-hidden="true"></i></span><span class="pfe-icon-list-text">30-Day Money-Back Guarantee</span></li></ul></div></div><div class="pft-con pv-d451387 " style="padding:0px 0px 0px 0px;position:relative;display:flex;flex-direction:row;gap:10px;align-items:center;justify-content:flex-start;flex-wrap:nowrap;"><div class="pfe-element pfe-widget pfe-widget-image pft-trust-avatars" style=""><div class="pfe-widget-container"><img src="https://raw.githubusercontent.com/mariemmejri23-create/Personal-fitness-ytainer/claude/wordpress-elementor-design-4l07jm/assets/images/hero-avatars.jpg" alt="Happy clients"></div></div><div class="pfe-element pfe-widget pfe-widget-text-editor pft-trust-text" style=""><div class="pfe-widget-container"><p>Trusted by 2,000+ clients worldwide</p><p><span class="pft-star">&#9733;</span> Rated 4.9 out of 5.0</p></div></div></div><div class="pfe-element pfe-widget pfe-widget-heading pft-h1" style=""><div class="pfe-widget-container"><h1 class="pfe-heading-title">Because your best self<br>isn&rsquo;t behind you, it&rsquo;s ahead</h1></div></div></div><div class="pft-con pv-b677335 " style="padding:0px 0px 0px 0px;position:relative;width:278px;max-width:100%;flex-shrink:0;display:flex;flex-direction:column;gap:12px;align-items:stretch;justify-content:flex-start;flex-wrap:nowrap;"><div class="pft-con pv-8193b52 pft-hero-card" style="padding:16px 16px 16px 16px;position:relative;display:flex;flex-direction:column;gap:14px;align-items:stretch;justify-content:flex-start;flex-wrap:nowrap;"><div class="pfe-element pfe-widget pfe-widget-icon " style="text-align:left;"><div class="pfe-widget-container"><div class="pfe-icon-wrapper"><div class="pfe-icon"><i class="far fa-calendar" aria-hidden="true"></i></div></div></div></div><div class="pft-con pv-b25cab1 " style="padding:0px 0px 0px 0px;position:relative;display:flex;flex-direction:row;gap:12px;align-items:center;justify-content:space-between;flex-wrap:nowrap;"><div class="pfe-element pfe-widget pfe-widget-text-editor " style="flex-grow:1;"><div class="pfe-widget-container"><p>30-min session<br>Book your call</p></div></div><div class="pfe-element pfe-widget pfe-widget-button pft-arrow" style=""><div class="pfe-widget-container"><div class="pfe-button-wrapper"><a class="pfe-button" href="#contact"><span class="pfe-button-content-wrapper"><span class="pfe-button-icon"><i class="fas fa-arrow-right" aria-hidden="true"></i></span><span class="pfe-button-text"></span></span></a></div></div></div></div></div><div class="pfe-element pfe-widget pfe-widget-text-editor pft-hero-note" style=""><div class="pfe-widget-container"><p>No pressure. Just a clear path forward.</p></div></div></div></div></div>
+</div>
+<script>document.querySelectorAll('.pft-page .pfe-tab-title').forEach(function(t){if(t.dataset.pft)return;t.dataset.pft=1;t.addEventListener('click',function(){var c=t.nextElementSibling;c.hidden=!c.hidden;});});</script>

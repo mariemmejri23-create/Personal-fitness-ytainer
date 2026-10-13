@@ -1,4 +1,4 @@
-<!-- Personal Fitness Trainer — page complete a coller dans un widget HTML (Elementor) ou un bloc HTML personnalise -->
+<!-- Personal Fitness Trainer — page complete a coller dans un widget HTML -->
 <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Instrument+Sans:wght@400;500;600;700&display=swap">
 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
 <style>
@@ -269,4 +269,4 @@ body .pft-contact .pft-form-title .pfe-heading-title { font-size: 32px; font-wei
 </form>
 </div></div></div></div></div></div></div>
 </div>
-<script>document.querySelectorAll('.pft-page .pfe-tab-title').forEach(function(t){t.addEventListener('click',function(){var c=t.nextElementSibling;c.hidden=!c.hidden;});});</script>
+<script>document.querySelectorAll('.pft-page .pfe-tab-title').forEach(function(t){if(t.dataset.pft)return;t.dataset.pft=1;t.addEventListener('click',function(){var c=t.nextElementSibling;c.hidden=!c.hidden;});});</script>
