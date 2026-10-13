@@ -1,0 +1,4753 @@
+{
+ "version": "0.4",
+ "title": "Personal Fitness Trainer",
+ "type": "page",
+ "page_settings": {
+  "template": "elementor_header_footer",
+  "hide_title": "yes"
+ },
+ "content": [
+  {
+   "id": "e020511",
+   "elType": "container",
+   "isInner": false,
+   "settings": {
+    "flex_direction": "column",
+    "flex_gap": {
+     "unit": "px",
+     "size": 0,
+     "column": "0",
+     "row": "0",
+     "isLinked": true
+    },
+    "padding": {
+     "unit": "px",
+     "top": "0",
+     "right": "0",
+     "bottom": "0",
+     "left": "0",
+     "isLinked": false
+    },
+    "content_width": "full",
+    "css_classes": "pft-section pft-styles"
+   },
+   "elements": [
+    {
+     "id": "b9f96a9",
+     "elType": "widget",
+     "widgetType": "html",
+     "settings": {
+      "html": "<style>\n/* =========================================================================\n   Personal Fitness Trainer — styles for the Elementor template\n   Every rule is scoped to the .pft-* classes set on the template's\n   containers/widgets, so it does not affect the rest of the site.\n   This file is embedded in the template (first \"HTML\" widget). You can\n   also paste it in Appearance > Customize > Additional CSS instead.\n   ========================================================================= */\n@import url('https://fonts.googleapis.com/css2?family=Instrument+Sans:wght@400;500;600;700&display=swap');\n\n.pft-section {\n  --pft-orange: #f9652f;\n  --pft-black: #121212;\n  --pft-card-dark: #1c1c1c;\n  --pft-light: #f8f8f8;\n  --pft-text: #121212;\n  --pft-muted: #6f6f6f;\n  --pft-font: 'Instrument Sans', 'Inter', system-ui, sans-serif;\n  font-family: var(--pft-font);\n  color: var(--pft-text);\n  font-size: 15px;\n  line-height: 1.45;\n}\nbody .pft-section .elementor-heading-title,\nbody .pft-section .elementor-widget-text-editor,\nbody .pft-section .elementor-button,\nbody .pft-section .elementor-icon-list-text,\nbody .pft-section .elementor-toggle-title,\nbody .pft-section .elementor-tab-content,\nbody .pft-section input,\nbody .pft-section textarea,\nbody .pft-section button {\n  font-family: var(--pft-font);\n}\nbody .pft-section .elementor-heading-title { color: inherit; letter-spacing: -0.04em; }\nbody .pft-section .elementor-widget-text-editor { color: inherit; font-size: 15px; line-height: 1.45; }\nbody .pft-section .elementor-widget-text-editor p { margin: 0 0 14px; }\nbody .pft-section .elementor-widget-text-editor p:last-child { margin-bottom: 0; }\nbody .pft-section .elementor-widget-image img { vertical-align: middle; }\n\n/* Style holder (first container): invisible on the live page */\n.pft-styles { padding: 0 !important; min-height: 0 !important; height: 0; overflow: hidden; }\nbody.elementor-editor-active .pft-styles { height: auto; min-height: 24px !important; }\n\n/* ---------- Typography helpers ---------- */\nbody .pft-section .pft-label .elementor-heading-title { font-size: 14px; font-weight: 400; letter-spacing: 0; color: var(--pft-muted); }\nbody .pft-section .pft-h1 .elementor-heading-title { font-size: 64px; font-weight: 400; line-height: 1.04; letter-spacing: -0.05em; color: #fff; }\nbody .pft-section .pft-h2 .elementor-heading-title { font-size: 48px; font-weight: 500; line-height: 1.1; }\nbody .pft-section .pft-h3 .elementor-heading-title { font-size: 20px; font-weight: 500; line-height: 1.25; letter-spacing: -0.02em; }\nbody .pft-section .pft-muted { color: var(--pft-muted); font-size: 14px; }\nbody .pft-section .pft-stars .elementor-heading-title { color: #f5b301; font-size: 22px; letter-spacing: 2px; line-height: 1; }\n\n/* ---------- Buttons ---------- */\nbody .pft-section .pft-btn .elementor-button {\n  display: inline-flex; align-items: center;\n  background: var(--pft-orange); color: var(--pft-black);\n  font-size: 14px; font-weight: 500; letter-spacing: 0;\n  padding: 4px 4px 4px 24px; border-radius: 8px; border: 1px solid var(--pft-orange);\n  transition: transform .2s ease, box-shadow .2s ease;\n}\nbody .pft-section .pft-btn .elementor-button:hover { transform: translateY(-1px); box-shadow: 0 8px 24px rgba(249,101,47,.35); }\nbody .pft-section .pft-btn .elementor-button-content-wrapper { display: flex; align-items: center; gap: 24px; flex-direction: row; }\nbody .pft-section .pft-btn .elementor-button-text { order: 1; }\nbody .pft-section .pft-btn .elementor-button-icon,\nbody .pft-section .pft-arrow .elementor-button-icon {\n  order: 2; margin: 0 !important;\n  width: 40px; height: 40px; border-radius: 6px;\n  background: var(--pft-black); color: #fff; fill: #fff;\n  display: inline-flex; align-items: center; justify-content: center; font-size: 15px;\n}\nbody .pft-section .pft-btn .elementor-button-icon svg,\nbody .pft-section .pft-arrow .elementor-button-icon svg { width: 15px; height: 15px; fill: #fff; }\nbody .pft-section .pft-btn--outline .elementor-button { background: #fff; border-color: var(--pft-black); }\nbody .pft-section .pft-btn--outline .elementor-button:hover { box-shadow: 0 8px 24px rgba(0,0,0,.12); }\nbody .pft-section .pft-btn--block,\nbody .pft-section .pft-btn--block .elementor-button { width: 100%; }\nbody .pft-section .pft-btn--block .elementor-button-content-wrapper { width: 100%; justify-content: space-between; }\n/* Icon-only square arrow button */\nbody .pft-section .pft-arrow .elementor-button { background: transparent; padding: 0; border: 0; line-height: 0; }\nbody .pft-section .pft-arrow .elementor-button-text { display: none; }\n\n/* ---------- Hero ---------- */\nbody .pft-hero { color: #fff; }\nbody .pft-hero .pft-badge .elementor-icon-list-items { display: inline-flex; }\nbody .pft-hero .pft-badge .elementor-icon-list-item {\n  background: rgba(18,18,18,.85); border-radius: 999px; padding: 9px 16px; color: #fff; font-size: 14px; gap: 8px;\n}\nbody .pft-hero .pft-badge .elementor-icon-list-icon i { color: #fff; font-size: 18px; }\nbody .pft-hero .pft-badge .elementor-icon-list-icon svg { fill: #fff; width: 18px; height: 18px; }\nbody .pft-hero .pft-badge .elementor-icon-list-text { color: #fff; padding: 0; }\nbody .pft-hero .pft-trust-avatars img { width: 88px; height: 44px; object-fit: cover; border-radius: 22px; }\nbody .pft-hero .pft-trust-text { font-size: 14px; line-height: 1.5; color: #fff; }\nbody .pft-hero .pft-trust-text p { margin: 0 !important; }\nbody .pft-hero .pft-trust-text .pft-star { color: #f5b301; }\nbody .pft-hero-card { background: var(--pft-orange); border-radius: 16px; color: var(--pft-black); transition: transform .2s ease; }\nbody .pft-hero-card:hover { transform: translateY(-2px); }\nbody .pft-hero-card .elementor-icon { color: var(--pft-black); font-size: 22px; }\nbody .pft-hero-card .elementor-icon svg { fill: var(--pft-black); width: 22px; height: 22px; }\nbody .pft-hero-card .elementor-widget-text-editor { font-size: 14px; font-weight: 500; line-height: 1.5; color: var(--pft-black); }\nbody .pft-hero .pft-hero-note { font-size: 14px; color: rgba(255,255,255,.85); }\n\n/* ---------- Stats ---------- */\nbody .pft-stats .pft-stat-number .elementor-heading-title { font-size: 60px; font-weight: 400; line-height: 1; letter-spacing: -0.04em; }\nbody .pft-stats .pft-stat-title .elementor-heading-title { font-size: 20px; font-weight: 500; letter-spacing: -0.02em; }\nbody .pft-stats .pft-muted { line-height: 1.5; }\n\n/* ---------- Testimonial ---------- */\nbody .pft-testimonial .pft-quote .elementor-heading-title { font-size: 48px; font-weight: 500; line-height: 1.1; letter-spacing: -0.045em; }\nbody .pft-section .pft-avatar img { width: 64px; height: 64px; border-radius: 50%; object-fit: cover; }\nbody .pft-section .pft-avatar--lg img { width: 72px; height: 72px; }\nbody .pft-section .pft-author-name .elementor-heading-title { font-size: 20px; font-weight: 400; letter-spacing: -0.02em; }\n\n/* ---------- About ---------- */\nbody .pft-about .pft-about-media { border-radius: 32px; overflow: hidden; }\nbody .pft-about .pft-signature img { width: 150px; }\nbody .pft-about .pft-value {\n  background: var(--pft-light); border-radius: 24px;\n}\nbody .pft-about .pft-value .elementor-icon { color: var(--pft-black); font-size: 24px; }\nbody .pft-about .pft-value .elementor-icon svg { width: 24px; height: 24px; }\nbody .pft-about .pft-value .elementor-widget-text-editor { font-size: 14px; line-height: 1.5; }\nbody .pft-logos .elementor-widget-image img { height: 42px; width: auto; opacity: .75; filter: grayscale(1); }\n\n/* ---------- Services (dark) ---------- */\nbody .pft-services { color: #fff; }\nbody .pft-services .pft-label .elementor-heading-title { color: #fff; }\nbody .pft-services .pft-card {\n  background: var(--pft-card-dark); border-radius: 24px; transition: background .2s ease;\n}\nbody .pft-services .pft-card:hover { background: #232323; }\nbody .pft-services .pft-card .elementor-icon { color: #fff; font-size: 22px; }\nbody .pft-services .pft-card .elementor-icon svg { fill: #fff; width: 22px; height: 22px; }\nbody .pft-services .pft-card .pft-card-text { color: rgba(255,255,255,.7); font-size: 14px; line-height: 1.5; }\nbody .pft-services .pft-city .elementor-heading-title { font-size: 60px; font-weight: 400; line-height: 1; letter-spacing: -0.05em; }\nbody .pft-services .pft-card-img img { width: 100%; height: 100%; object-fit: cover; border-radius: 16px; }\nbody .pft-services .pft-card-img,\nbody .pft-services .pft-card-img > .elementor-widget-container { height: 100%; }\nbody .pft-services .pft-intro { font-size: 16px; line-height: 1.6; max-width: 400px; }\n\n/* ---------- Process ---------- */\nbody .pft-process .pft-img img { width: 100%; border-radius: 24px; aspect-ratio: 540 / 412; object-fit: cover; }\nbody .pft-process .pft-step-num .elementor-heading-title { font-size: 18px; font-weight: 400; color: var(--pft-muted); letter-spacing: 0; }\nbody .pft-process .pft-step-title .elementor-heading-title { font-size: 32px; font-weight: 500; line-height: 1.15; letter-spacing: -0.04em; }\n\n/* ---------- Programs / pricing ---------- */\nbody .pft-programs .pft-h2 .elementor-heading-title { font-size: 56px; }\nbody .pft-programs .pft-price-card { background: var(--pft-light); border-radius: 32px; position: relative; transition: transform .2s ease, box-shadow .2s ease; }\nbody .pft-programs .pft-price-card:hover { transform: translateY(-4px); box-shadow: 0 20px 40px rgba(0,0,0,.08); }\nbody .pft-programs .pft-price-card--featured { background: var(--pft-orange); }\nbody .pft-programs .pft-price-icon .elementor-icon {\n  width: 40px; height: 40px; border-radius: 8px; background: #fff; color: var(--pft-black);\n  display: inline-flex; align-items: center; justify-content: center; font-size: 17px;\n}\nbody .pft-programs .pft-price-icon .elementor-icon svg { width: 17px; height: 17px; }\nbody .pft-programs .pft-price-card--featured .pft-price-icon .elementor-icon { background: var(--pft-black); color: #fff; }\nbody .pft-programs .pft-price-card--featured .pft-price-icon .elementor-icon svg { fill: #fff; }\nbody .pft-programs .pft-popular { position: absolute !important; top: 20px; right: 20px; width: auto !important; }\nbody .pft-programs .pft-popular .elementor-heading-title {\n  background: var(--pft-black); color: #fff; font-size: 14px; font-weight: 500; letter-spacing: 0;\n  padding: 9px 12px; border-radius: 6px; line-height: 1;\n}\nbody .pft-programs .pft-price .elementor-heading-title { font-size: 40px; font-weight: 700; line-height: 1; letter-spacing: -0.03em; }\nbody .pft-programs .pft-price .elementor-heading-title span { font-size: 15px; font-weight: 400; letter-spacing: 0; }\nbody .pft-programs .pft-price-desc { min-height: 44px; }\nbody .pft-programs .pft-price-card > .elementor-widget-button { margin-top: auto; }\nbody .pft-programs .pft-included .elementor-heading-title { font-size: 14px; font-weight: 400; letter-spacing: 0; color: #4a4a4a; }\nbody .pft-programs .pft-checks .elementor-icon-list-item { padding: 6px 0 !important; font-size: 14px; }\nbody .pft-programs .pft-checks .elementor-icon-list-text { color: #2b2b2b; padding-left: 12px !important; }\nbody .pft-programs .pft-checks .elementor-icon-list-icon i { color: var(--pft-black); font-size: 13px; }\nbody .pft-programs .pft-checks .elementor-icon-list-icon svg { fill: var(--pft-black); width: 13px; }\n\n/* ---------- Results ---------- */\nbody .pft-results .pft-img img { width: 100%; border-radius: 24px; }\n\n/* ---------- FAQ (Toggle widget) ---------- */\nbody .pft-faq .elementor-toggle .elementor-tab-title {\n  border: 0; padding: 26px 24px 26px 0; font-size: 15px; font-weight: 500; color: var(--pft-text);\n  border-bottom: 1px solid transparent;\n}\nbody .pft-faq .elementor-toggle .elementor-toggle-title { color: var(--pft-text); }\nbody .pft-faq .elementor-toggle .elementor-toggle-icon { color: var(--pft-text); }\nbody .pft-faq .elementor-toggle .elementor-toggle-icon svg { fill: var(--pft-text); }\nbody .pft-faq .elementor-toggle .elementor-tab-content { border: 0; padding: 0 0 26px; color: var(--pft-muted); font-size: 15px; }\n\n/* ---------- Contact ---------- */\nbody .pft-contact .pft-contact-card { background: var(--pft-light); border-radius: 24px; transition: background .2s ease; }\nbody .pft-contact .pft-contact-card:hover { background: #f1f1f1; }\nbody .pft-contact .pft-contact-card .elementor-icon { color: var(--pft-black); font-size: 24px; }\nbody .pft-contact .pft-contact-card .elementor-icon svg { width: 24px; height: 24px; }\nbody .pft-contact .pft-contact-card .pft-h3 .elementor-heading-title { font-size: 20px; font-weight: 400; }\nbody .pft-contact .pft-form-title .elementor-heading-title { font-size: 32px; font-weight: 500; }\n.pft-form { display: flex; flex-direction: column; gap: 20px; }\n.pft-form label { display: block; font-size: 14px; font-weight: 500; margin-bottom: 8px; color: #121212; }\n.pft-form input, .pft-form textarea {\n  width: 100%; border: 0; border-bottom: 1px solid transparent; border-radius: 8px;\n  background: transparent; padding: 14px 16px; font-size: 14px; color: #121212; outline: none;\n  transition: background .2s ease;\n}\n.pft-form input:focus, .pft-form textarea:focus { background: #f8f8f8; }\n.pft-form textarea { min-height: 96px; resize: vertical; border-bottom: 1px solid #e5e5e5; border-radius: 0; }\n.pft-form ::placeholder { color: #8a8a8a; }\n.pft-form button {\n  display: flex; align-items: center; justify-content: space-between; width: 100%;\n  background: #f9652f; color: #121212; border: 0; border-radius: 8px; padding: 4px 4px 4px 24px;\n  font-size: 14px; font-weight: 500; cursor: pointer; margin-top: 4px;\n}\n.pft-form button span.pft-form-arrow {\n  width: 40px; height: 40px; border-radius: 6px; background: #121212; color: #fff;\n  display: inline-flex; align-items: center; justify-content: center;\n}\n/* Same look for Contact Form 7 / WPForms if you replace the HTML form with a shortcode */\n.pft-form-wrap .wpcf7 input:not([type=submit]), .pft-form-wrap .wpcf7 textarea,\n.pft-form-wrap .wpforms-form input, .pft-form-wrap .wpforms-form textarea {\n  width: 100%; border: 0; border-bottom: 1px solid #e5e5e5; border-radius: 0; background: transparent; padding: 14px 16px;\n}\n.pft-form-wrap .wpcf7 input[type=submit], .pft-form-wrap .wpforms-form button[type=submit] {\n  width: 100%; background: #f9652f; color: #121212; border: 0; border-radius: 8px; padding: 14px 24px; font-weight: 500;\n}\n\n/* ---------- Responsive ---------- */\n@media (max-width: 1024px) {\n  body .pft-section .pft-h1 .elementor-heading-title { font-size: 52px; }\n  body .pft-section .pft-h2 .elementor-heading-title,\n  body .pft-programs .pft-h2 .elementor-heading-title,\n  body .pft-testimonial .pft-quote .elementor-heading-title { font-size: 40px; }\n}\n@media (max-width: 767px) {\n  body .pft-section .pft-h1 .elementor-heading-title { font-size: 40px; }\n  body .pft-section .pft-h2 .elementor-heading-title,\n  body .pft-programs .pft-h2 .elementor-heading-title { font-size: 34px; }\n  body .pft-testimonial .pft-quote .elementor-heading-title { font-size: 28px; }\n  body .pft-stats .pft-stat-number .elementor-heading-title,\n  body .pft-services .pft-city .elementor-heading-title { font-size: 44px; }\n  body .pft-process .pft-step-title .elementor-heading-title { font-size: 26px; }\n  body .pft-logos .elementor-widget-image img { height: 30px; }\n  body .pft-section .pft-h1 br { display: none; }\n  body .pft-services .pft-card-img img { max-height: 360px; }\n  body .pft-contact .pft-contact-card { min-height: 180px !important; }\n}\n\n</style>"
+     },
+     "elements": []
+    }
+   ]
+  },
+  {
+   "id": "6756397",
+   "elType": "container",
+   "isInner": false,
+   "settings": {
+    "flex_direction": "row",
+    "flex_gap": {
+     "unit": "px",
+     "size": 24,
+     "column": "24",
+     "row": "24",
+     "isLinked": true
+    },
+    "padding": {
+     "unit": "px",
+     "top": "160",
+     "right": "0",
+     "bottom": "40",
+     "left": "0",
+     "isLinked": false
+    },
+    "content_width": "boxed",
+    "boxed_width": {
+     "unit": "px",
+     "size": 1120,
+     "sizes": []
+    },
+    "flex_align_items": "flex-end",
+    "flex_justify_content": "space-between",
+    "flex_wrap": "wrap",
+    "min_height": {
+     "unit": "px",
+     "size": 900,
+     "sizes": []
+    },
+    "background_background": "classic",
+    "background_image": {
+     "url": "https://raw.githubusercontent.com/mariemmejri23-create/Personal-fitness-ytainer/claude/wordpress-elementor-design-4l07jm/assets/images/hero-bg.jpg",
+     "id": "",
+     "alt": "",
+     "source": "library"
+    },
+    "background_position": "center center",
+    "background_size": "cover",
+    "background_repeat": "no-repeat",
+    "background_overlay_background": "gradient",
+    "background_overlay_color": "rgba(0,0,0,0)",
+    "background_overlay_color_stop": {
+     "unit": "%",
+     "size": 45,
+     "sizes": []
+    },
+    "background_overlay_color_b": "rgba(0,0,0,0.78)",
+    "background_overlay_color_b_stop": {
+     "unit": "%",
+     "size": 100,
+     "sizes": []
+    },
+    "background_overlay_gradient_type": "linear",
+    "background_overlay_gradient_angle": {
+     "unit": "deg",
+     "size": 180,
+     "sizes": []
+    },
+    "_element_id": "top",
+    "flex_direction_tablet": "column",
+    "flex_align_items_tablet": "flex-start",
+    "flex_justify_content_tablet": "flex-end",
+    "padding_tablet": {
+     "unit": "px",
+     "top": "160",
+     "right": "24",
+     "bottom": "40",
+     "left": "24",
+     "isLinked": false
+    },
+    "flex_gap_tablet": {
+     "unit": "px",
+     "size": 32,
+     "column": "32",
+     "row": "32",
+     "isLinked": true
+    },
+    "min_height_tablet": {
+     "unit": "px",
+     "size": 820,
+     "sizes": []
+    },
+    "padding_mobile": {
+     "unit": "px",
+     "top": "140",
+     "right": "20",
+     "bottom": "32",
+     "left": "20",
+     "isLinked": false
+    },
+    "min_height_mobile": {
+     "unit": "px",
+     "size": 720,
+     "sizes": []
+    },
+    "css_classes": "pft-section pft-hero"
+   },
+   "elements": [
+    {
+     "id": "65740f9",
+     "elType": "container",
+     "isInner": true,
+     "settings": {
+      "flex_direction": "column",
+      "flex_gap": {
+       "unit": "px",
+       "size": 24,
+       "column": "24",
+       "row": "24",
+       "isLinked": true
+      },
+      "padding": {
+       "unit": "px",
+       "top": "0",
+       "right": "0",
+       "bottom": "0",
+       "left": "0",
+       "isLinked": false
+      },
+      "content_width": "full",
+      "width": {
+       "unit": "%",
+       "size": 62,
+       "sizes": []
+      },
+      "flex_align_items": "flex-start",
+      "width_tablet": {
+       "unit": "%",
+       "size": 100,
+       "sizes": []
+      },
+      "width_mobile": {
+       "unit": "%",
+       "size": 100,
+       "sizes": []
+      }
+     },
+     "elements": [
+      {
+       "id": "b3c52bb",
+       "elType": "widget",
+       "widgetType": "icon-list",
+       "settings": {
+        "icon_list": [
+         {
+          "_id": "aa94338",
+          "text": "30-Day Money-Back Guarantee",
+          "selected_icon": {
+           "value": "fas fa-shield-alt",
+           "library": "fa-solid"
+          }
+         }
+        ],
+        "view": "inline",
+        "_css_classes": "pft-badge"
+       },
+       "elements": []
+      },
+      {
+       "id": "d451387",
+       "elType": "container",
+       "isInner": true,
+       "settings": {
+        "flex_direction": "row",
+        "flex_gap": {
+         "unit": "px",
+         "size": 10,
+         "column": "10",
+         "row": "10",
+         "isLinked": true
+        },
+        "padding": {
+         "unit": "px",
+         "top": "0",
+         "right": "0",
+         "bottom": "0",
+         "left": "0",
+         "isLinked": false
+        },
+        "content_width": "full",
+        "flex_align_items": "center"
+       },
+       "elements": [
+        {
+         "id": "36ddaf8",
+         "elType": "widget",
+         "widgetType": "image",
+         "settings": {
+          "image": {
+           "url": "https://raw.githubusercontent.com/mariemmejri23-create/Personal-fitness-ytainer/claude/wordpress-elementor-design-4l07jm/assets/images/hero-avatars.jpg",
+           "id": "",
+           "alt": "Happy clients",
+           "source": "library"
+          },
+          "image_size": "full",
+          "_css_classes": "pft-trust-avatars"
+         },
+         "elements": []
+        },
+        {
+         "id": "d9d5c9d",
+         "elType": "widget",
+         "widgetType": "text-editor",
+         "settings": {
+          "editor": "<p>Trusted by 2,000+ clients worldwide</p><p><span class=\"pft-star\">&#9733;</span> Rated 4.9 out of 5.0</p>",
+          "_css_classes": "pft-trust-text"
+         },
+         "elements": []
+        }
+       ]
+      },
+      {
+       "id": "ba2251c",
+       "elType": "widget",
+       "widgetType": "heading",
+       "settings": {
+        "title": "Because your best self<br>isn&rsquo;t behind you, it&rsquo;s ahead",
+        "header_size": "h1",
+        "_css_classes": "pft-h1"
+       },
+       "elements": []
+      }
+     ]
+    },
+    {
+     "id": "b677335",
+     "elType": "container",
+     "isInner": true,
+     "settings": {
+      "flex_direction": "column",
+      "flex_gap": {
+       "unit": "px",
+       "size": 12,
+       "column": "12",
+       "row": "12",
+       "isLinked": true
+      },
+      "padding": {
+       "unit": "px",
+       "top": "0",
+       "right": "0",
+       "bottom": "0",
+       "left": "0",
+       "isLinked": false
+      },
+      "content_width": "full",
+      "width": {
+       "unit": "px",
+       "size": 278,
+       "sizes": []
+      },
+      "width_mobile": {
+       "unit": "%",
+       "size": 100,
+       "sizes": []
+      }
+     },
+     "elements": [
+      {
+       "id": "8193b52",
+       "elType": "container",
+       "isInner": true,
+       "settings": {
+        "flex_direction": "column",
+        "flex_gap": {
+         "unit": "px",
+         "size": 14,
+         "column": "14",
+         "row": "14",
+         "isLinked": true
+        },
+        "padding": {
+         "unit": "px",
+         "top": "16",
+         "right": "16",
+         "bottom": "16",
+         "left": "16",
+         "isLinked": false
+        },
+        "content_width": "full",
+        "css_classes": "pft-hero-card"
+       },
+       "elements": [
+        {
+         "id": "d39d801",
+         "elType": "widget",
+         "widgetType": "icon",
+         "settings": {
+          "selected_icon": {
+           "value": "far fa-calendar",
+           "library": "fa-regular"
+          },
+          "align": "left"
+         },
+         "elements": []
+        },
+        {
+         "id": "b25cab1",
+         "elType": "container",
+         "isInner": true,
+         "settings": {
+          "flex_direction": "row",
+          "flex_gap": {
+           "unit": "px",
+           "size": 12,
+           "column": "12",
+           "row": "12",
+           "isLinked": true
+          },
+          "padding": {
+           "unit": "px",
+           "top": "0",
+           "right": "0",
+           "bottom": "0",
+           "left": "0",
+           "isLinked": false
+          },
+          "content_width": "full",
+          "flex_align_items": "center",
+          "flex_justify_content": "space-between"
+         },
+         "elements": [
+          {
+           "id": "981fc3a",
+           "elType": "widget",
+           "widgetType": "text-editor",
+           "settings": {
+            "editor": "<p>30-min session<br>Book your call</p>",
+            "_flex_size": "grow"
+           },
+           "elements": []
+          },
+          {
+           "id": "0b53c98",
+           "elType": "widget",
+           "widgetType": "button",
+           "settings": {
+            "text": "",
+            "link": {
+             "url": "#contact",
+             "is_external": "",
+             "nofollow": ""
+            },
+            "selected_icon": {
+             "value": "fas fa-arrow-right",
+             "library": "fa-solid"
+            },
+            "icon_align": "right",
+            "size": "sm",
+            "_css_classes": "pft-arrow"
+           },
+           "elements": []
+          }
+         ]
+        }
+       ]
+      },
+      {
+       "id": "28e327e",
+       "elType": "widget",
+       "widgetType": "text-editor",
+       "settings": {
+        "editor": "<p>No pressure. Just a clear path forward.</p>",
+        "_css_classes": "pft-hero-note"
+       },
+       "elements": []
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "id": "4afb283",
+   "elType": "container",
+   "isInner": false,
+   "settings": {
+    "flex_direction": "row",
+    "flex_gap": {
+     "unit": "px",
+     "size": 24,
+     "column": "24",
+     "row": "24",
+     "isLinked": true
+    },
+    "padding": {
+     "unit": "px",
+     "top": "96",
+     "right": "0",
+     "bottom": "96",
+     "left": "0",
+     "isLinked": false
+    },
+    "content_width": "boxed",
+    "boxed_width": {
+     "unit": "px",
+     "size": 1048,
+     "sizes": []
+    },
+    "flex_justify_content": "space-between",
+    "flex_wrap": "wrap",
+    "padding_tablet": {
+     "unit": "px",
+     "top": "72",
+     "right": "24",
+     "bottom": "72",
+     "left": "24",
+     "isLinked": false
+    },
+    "flex_gap_tablet": {
+     "unit": "px",
+     "size": 40,
+     "column": "40",
+     "row": "40",
+     "isLinked": true
+    },
+    "padding_mobile": {
+     "unit": "px",
+     "top": "56",
+     "right": "20",
+     "bottom": "56",
+     "left": "20",
+     "isLinked": false
+    },
+    "flex_gap_mobile": {
+     "unit": "px",
+     "size": 32,
+     "column": "32",
+     "row": "32",
+     "isLinked": true
+    },
+    "css_classes": "pft-section pft-stats"
+   },
+   "elements": [
+    {
+     "id": "961cfcb",
+     "elType": "container",
+     "isInner": true,
+     "settings": {
+      "flex_direction": "column",
+      "flex_gap": {
+       "unit": "px",
+       "size": 8,
+       "column": "8",
+       "row": "8",
+       "isLinked": true
+      },
+      "padding": {
+       "unit": "px",
+       "top": "0",
+       "right": "0",
+       "bottom": "0",
+       "left": "0",
+       "isLinked": false
+      },
+      "content_width": "full",
+      "width": {
+       "unit": "%",
+       "size": 23,
+       "sizes": []
+      },
+      "width_tablet": {
+       "unit": "%",
+       "size": 46,
+       "sizes": []
+      },
+      "width_mobile": {
+       "unit": "%",
+       "size": 100,
+       "sizes": []
+      }
+     },
+     "elements": [
+      {
+       "id": "c27d13f",
+       "elType": "widget",
+       "widgetType": "heading",
+       "settings": {
+        "title": "+250",
+        "header_size": "div",
+        "_css_classes": "pft-stat-number"
+       },
+       "elements": []
+      },
+      {
+       "id": "2b3002f",
+       "elType": "widget",
+       "widgetType": "heading",
+       "settings": {
+        "title": "Women Coached",
+        "header_size": "h3",
+        "_css_classes": "pft-stat-title"
+       },
+       "elements": []
+      },
+      {
+       "id": "18255b8",
+       "elType": "widget",
+       "widgetType": "text-editor",
+       "settings": {
+        "editor": "<p>From postpartum recovery to full transformations</p>",
+        "_css_classes": "pft-muted"
+       },
+       "elements": []
+      }
+     ]
+    },
+    {
+     "id": "5f06fe1",
+     "elType": "container",
+     "isInner": true,
+     "settings": {
+      "flex_direction": "column",
+      "flex_gap": {
+       "unit": "px",
+       "size": 8,
+       "column": "8",
+       "row": "8",
+       "isLinked": true
+      },
+      "padding": {
+       "unit": "px",
+       "top": "0",
+       "right": "0",
+       "bottom": "0",
+       "left": "0",
+       "isLinked": false
+      },
+      "content_width": "full",
+      "width": {
+       "unit": "%",
+       "size": 23,
+       "sizes": []
+      },
+      "width_tablet": {
+       "unit": "%",
+       "size": 46,
+       "sizes": []
+      },
+      "width_mobile": {
+       "unit": "%",
+       "size": 100,
+       "sizes": []
+      }
+     },
+     "elements": [
+      {
+       "id": "99a84bf",
+       "elType": "widget",
+       "widgetType": "heading",
+       "settings": {
+        "title": "98%",
+        "header_size": "div",
+        "_css_classes": "pft-stat-number"
+       },
+       "elements": []
+      },
+      {
+       "id": "2cb290e",
+       "elType": "widget",
+       "widgetType": "heading",
+       "settings": {
+        "title": "Consistency Rate",
+        "header_size": "h3",
+        "_css_classes": "pft-stat-title"
+       },
+       "elements": []
+      },
+      {
+       "id": "20d46b3",
+       "elType": "widget",
+       "widgetType": "text-editor",
+       "settings": {
+        "editor": "<p>Clients report staying on track week after week</p>",
+        "_css_classes": "pft-muted"
+       },
+       "elements": []
+      }
+     ]
+    },
+    {
+     "id": "fc3dc70",
+     "elType": "container",
+     "isInner": true,
+     "settings": {
+      "flex_direction": "column",
+      "flex_gap": {
+       "unit": "px",
+       "size": 8,
+       "column": "8",
+       "row": "8",
+       "isLinked": true
+      },
+      "padding": {
+       "unit": "px",
+       "top": "0",
+       "right": "0",
+       "bottom": "0",
+       "left": "0",
+       "isLinked": false
+      },
+      "content_width": "full",
+      "width": {
+       "unit": "%",
+       "size": 23,
+       "sizes": []
+      },
+      "width_tablet": {
+       "unit": "%",
+       "size": 46,
+       "sizes": []
+      },
+      "width_mobile": {
+       "unit": "%",
+       "size": 100,
+       "sizes": []
+      }
+     },
+     "elements": [
+      {
+       "id": "fec78b4",
+       "elType": "widget",
+       "widgetType": "heading",
+       "settings": {
+        "title": "5",
+        "header_size": "div",
+        "_css_classes": "pft-stat-number"
+       },
+       "elements": []
+      },
+      {
+       "id": "55e9977",
+       "elType": "widget",
+       "widgetType": "heading",
+       "settings": {
+        "title": "Average Feedback",
+        "header_size": "h3",
+        "_css_classes": "pft-stat-title"
+       },
+       "elements": []
+      },
+      {
+       "id": "431de90",
+       "elType": "widget",
+       "widgetType": "text-editor",
+       "settings": {
+        "editor": "<p>Based on client satisfaction and progress surveys</p>",
+        "_css_classes": "pft-muted"
+       },
+       "elements": []
+      }
+     ]
+    },
+    {
+     "id": "017c690",
+     "elType": "container",
+     "isInner": true,
+     "settings": {
+      "flex_direction": "column",
+      "flex_gap": {
+       "unit": "px",
+       "size": 8,
+       "column": "8",
+       "row": "8",
+       "isLinked": true
+      },
+      "padding": {
+       "unit": "px",
+       "top": "0",
+       "right": "0",
+       "bottom": "0",
+       "left": "0",
+       "isLinked": false
+      },
+      "content_width": "full",
+      "width": {
+       "unit": "%",
+       "size": 23,
+       "sizes": []
+      },
+      "width_tablet": {
+       "unit": "%",
+       "size": 46,
+       "sizes": []
+      },
+      "width_mobile": {
+       "unit": "%",
+       "size": 100,
+       "sizes": []
+      }
+     },
+     "elements": [
+      {
+       "id": "e21cf8d",
+       "elType": "widget",
+       "widgetType": "heading",
+       "settings": {
+        "title": "3x",
+        "header_size": "div",
+        "_css_classes": "pft-stat-number"
+       },
+       "elements": []
+      },
+      {
+       "id": "53997ea",
+       "elType": "widget",
+       "widgetType": "heading",
+       "settings": {
+        "title": "Faster Progress",
+        "header_size": "h3",
+        "_css_classes": "pft-stat-title"
+       },
+       "elements": []
+      },
+      {
+       "id": "694bd43",
+       "elType": "widget",
+       "widgetType": "text-editor",
+       "settings": {
+        "editor": "<p>From postpartum recovery to full transformations</p>",
+        "_css_classes": "pft-muted"
+       },
+       "elements": []
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "id": "de9dee3",
+   "elType": "container",
+   "isInner": false,
+   "settings": {
+    "flex_direction": "column",
+    "flex_gap": {
+     "unit": "px",
+     "size": 18,
+     "column": "18",
+     "row": "18",
+     "isLinked": true
+    },
+    "padding": {
+     "unit": "px",
+     "top": "96",
+     "right": "0",
+     "bottom": "96",
+     "left": "0",
+     "isLinked": false
+    },
+    "content_width": "boxed",
+    "boxed_width": {
+     "unit": "px",
+     "size": 808,
+     "sizes": []
+    },
+    "padding_tablet": {
+     "unit": "px",
+     "top": "72",
+     "right": "24",
+     "bottom": "72",
+     "left": "24",
+     "isLinked": false
+    },
+    "padding_mobile": {
+     "unit": "px",
+     "top": "56",
+     "right": "20",
+     "bottom": "56",
+     "left": "20",
+     "isLinked": false
+    },
+    "css_classes": "pft-section pft-testimonial"
+   },
+   "elements": [
+    {
+     "id": "6fbc453",
+     "elType": "widget",
+     "widgetType": "heading",
+     "settings": {
+      "title": "&#9733;&#9733;&#9733;&#9733;&#9733;",
+      "header_size": "div",
+      "_css_classes": "pft-stars"
+     },
+     "elements": []
+    },
+    {
+     "id": "b9d6811",
+     "elType": "widget",
+     "widgetType": "heading",
+     "settings": {
+      "title": "&ldquo;After two kids, I never thought I&rsquo;d feel this strong again. Rachel Stone helped me rebuild my body and confidence.&rdquo;",
+      "header_size": "blockquote",
+      "_css_classes": "pft-quote"
+     },
+     "elements": []
+    },
+    {
+     "id": "8285b24",
+     "elType": "container",
+     "isInner": true,
+     "settings": {
+      "flex_direction": "row",
+      "flex_gap": {
+       "unit": "px",
+       "size": 16,
+       "column": "16",
+       "row": "16",
+       "isLinked": true
+      },
+      "padding": {
+       "unit": "px",
+       "top": "0",
+       "right": "0",
+       "bottom": "0",
+       "left": "0",
+       "isLinked": false
+      },
+      "content_width": "full",
+      "flex_align_items": "center"
+     },
+     "elements": [
+      {
+       "id": "aeaf104",
+       "elType": "widget",
+       "widgetType": "image",
+       "settings": {
+        "image": {
+         "url": "https://raw.githubusercontent.com/mariemmejri23-create/Personal-fitness-ytainer/claude/wordpress-elementor-design-4l07jm/assets/images/avatar-sara.jpg",
+         "id": "",
+         "alt": "Sara Chen",
+         "source": "library"
+        },
+        "image_size": "full",
+        "_css_classes": "pft-avatar"
+       },
+       "elements": []
+      },
+      {
+       "id": "42ecf28",
+       "elType": "container",
+       "isInner": true,
+       "settings": {
+        "flex_direction": "column",
+        "flex_gap": {
+         "unit": "px",
+         "size": 2,
+         "column": "2",
+         "row": "2",
+         "isLinked": true
+        },
+        "padding": {
+         "unit": "px",
+         "top": "0",
+         "right": "0",
+         "bottom": "0",
+         "left": "0",
+         "isLinked": false
+        },
+        "content_width": "full",
+        "_flex_size": "grow"
+       },
+       "elements": [
+        {
+         "id": "14e34ca",
+         "elType": "widget",
+         "widgetType": "heading",
+         "settings": {
+          "title": "Sara Chen",
+          "header_size": "div",
+          "_css_classes": "pft-author-name"
+         },
+         "elements": []
+        },
+        {
+         "id": "4ce7acf",
+         "elType": "widget",
+         "widgetType": "text-editor",
+         "settings": {
+          "editor": "<p>Postnatal Reboot - November 2025</p>",
+          "_css_classes": "pft-muted"
+         },
+         "elements": []
+        }
+       ]
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "id": "2993cf5",
+   "elType": "container",
+   "isInner": false,
+   "settings": {
+    "flex_direction": "row",
+    "flex_gap": {
+     "unit": "px",
+     "size": 40,
+     "column": "40",
+     "row": "40",
+     "isLinked": true
+    },
+    "padding": {
+     "unit": "px",
+     "top": "96",
+     "right": "0",
+     "bottom": "64",
+     "left": "0",
+     "isLinked": false
+    },
+    "content_width": "boxed",
+    "boxed_width": {
+     "unit": "px",
+     "size": 1120,
+     "sizes": []
+    },
+    "flex_justify_content": "space-between",
+    "_element_id": "about",
+    "flex_direction_tablet": "column",
+    "padding_tablet": {
+     "unit": "px",
+     "top": "72",
+     "right": "24",
+     "bottom": "72",
+     "left": "24",
+     "isLinked": false
+    },
+    "flex_gap_tablet": {
+     "unit": "px",
+     "size": 48,
+     "column": "48",
+     "row": "48",
+     "isLinked": true
+    },
+    "flex_direction_mobile": "column",
+    "padding_mobile": {
+     "unit": "px",
+     "top": "56",
+     "right": "20",
+     "bottom": "56",
+     "left": "20",
+     "isLinked": false
+    },
+    "flex_gap_mobile": {
+     "unit": "px",
+     "size": 40,
+     "column": "40",
+     "row": "40",
+     "isLinked": true
+    },
+    "css_classes": "pft-section pft-about"
+   },
+   "elements": [
+    {
+     "id": "a6af1ba",
+     "elType": "container",
+     "isInner": true,
+     "settings": {
+      "flex_direction": "column",
+      "flex_gap": {
+       "unit": "px",
+       "size": 0,
+       "column": "0",
+       "row": "0",
+       "isLinked": true
+      },
+      "padding": {
+       "unit": "px",
+       "top": "0",
+       "right": "0",
+       "bottom": "0",
+       "left": "0",
+       "isLinked": false
+      },
+      "content_width": "full",
+      "width": {
+       "unit": "%",
+       "size": 53.6,
+       "sizes": []
+      },
+      "min_height": {
+       "unit": "px",
+       "size": 795,
+       "sizes": []
+      },
+      "background_background": "classic",
+      "background_image": {
+       "url": "https://raw.githubusercontent.com/mariemmejri23-create/Personal-fitness-ytainer/claude/wordpress-elementor-design-4l07jm/assets/images/coach-rachel.jpg",
+       "id": "",
+       "alt": "",
+       "source": "library"
+      },
+      "background_position": "center center",
+      "background_size": "cover",
+      "background_repeat": "no-repeat",
+      "width_tablet": {
+       "unit": "%",
+       "size": 100,
+       "sizes": []
+      },
+      "min_height_tablet": {
+       "unit": "px",
+       "size": 620,
+       "sizes": []
+      },
+      "width_mobile": {
+       "unit": "%",
+       "size": 100,
+       "sizes": []
+      },
+      "min_height_mobile": {
+       "unit": "px",
+       "size": 440,
+       "sizes": []
+      },
+      "css_classes": "pft-about-media"
+     },
+     "elements": []
+    },
+    {
+     "id": "4493fc1",
+     "elType": "container",
+     "isInner": true,
+     "settings": {
+      "flex_direction": "column",
+      "flex_gap": {
+       "unit": "px",
+       "size": 48,
+       "column": "48",
+       "row": "48",
+       "isLinked": true
+      },
+      "padding": {
+       "unit": "px",
+       "top": "0",
+       "right": "0",
+       "bottom": "0",
+       "left": "0",
+       "isLinked": false
+      },
+      "content_width": "full",
+      "width": {
+       "unit": "%",
+       "size": 42.9,
+       "sizes": []
+      },
+      "flex_justify_content": "space-between",
+      "width_tablet": {
+       "unit": "%",
+       "size": 100,
+       "sizes": []
+      },
+      "width_mobile": {
+       "unit": "%",
+       "size": 100,
+       "sizes": []
+      }
+     },
+     "elements": [
+      {
+       "id": "23ffa6f",
+       "elType": "container",
+       "isInner": true,
+       "settings": {
+        "flex_direction": "column",
+        "flex_gap": {
+         "unit": "px",
+         "size": 16,
+         "column": "16",
+         "row": "16",
+         "isLinked": true
+        },
+        "padding": {
+         "unit": "px",
+         "top": "0",
+         "right": "0",
+         "bottom": "0",
+         "left": "0",
+         "isLinked": false
+        },
+        "content_width": "full"
+       },
+       "elements": [
+        {
+         "id": "a9a7c90",
+         "elType": "widget",
+         "widgetType": "heading",
+         "settings": {
+          "title": "Meet your coach",
+          "header_size": "div",
+          "_css_classes": "pft-label"
+         },
+         "elements": []
+        },
+        {
+         "id": "c08e75b",
+         "elType": "widget",
+         "widgetType": "heading",
+         "settings": {
+          "title": "Hi, I&rsquo;m Rachel Stone",
+          "header_size": "h2",
+          "_css_classes": "pft-h2"
+         },
+         "elements": []
+        },
+        {
+         "id": "4ffeb86",
+         "elType": "widget",
+         "widgetType": "text-editor",
+         "settings": {
+          "editor": "<p>For years, I thought strength meant doing more &mdash; training harder, eating cleaner, sleeping less. I pushed through exhaustion, believing discipline would bring freedom. It didn&rsquo;t.</p><p>When burnout finally forced me to slow down, I started listening. I studied how movement, hormones, rest, and mindset work together &mdash; and rebuilt my strength through awareness, not pressure.</p><p>Now I help women do the same: feel capable and confident again without sacrificing themselves to get there. My approach blends science and empathy &mdash; habit-based, psychology-first, and built for lasting balance</p>"
+         },
+         "elements": []
+        },
+        {
+         "id": "849908c",
+         "elType": "widget",
+         "widgetType": "image",
+         "settings": {
+          "image": {
+           "url": "https://raw.githubusercontent.com/mariemmejri23-create/Personal-fitness-ytainer/claude/wordpress-elementor-design-4l07jm/assets/images/signature.png",
+           "id": "",
+           "alt": "Rachel Stone signature",
+           "source": "library"
+          },
+          "image_size": "full",
+          "align": "right",
+          "_css_classes": "pft-signature"
+         },
+         "elements": []
+        }
+       ]
+      },
+      {
+       "id": "71f76ad",
+       "elType": "container",
+       "isInner": true,
+       "settings": {
+        "flex_direction": "column",
+        "flex_gap": {
+         "unit": "px",
+         "size": 24,
+         "column": "24",
+         "row": "24",
+         "isLinked": true
+        },
+        "padding": {
+         "unit": "px",
+         "top": "0",
+         "right": "0",
+         "bottom": "0",
+         "left": "0",
+         "isLinked": false
+        },
+        "content_width": "full"
+       },
+       "elements": [
+        {
+         "id": "4e2c2c8",
+         "elType": "widget",
+         "widgetType": "heading",
+         "settings": {
+          "title": "My Philosophy",
+          "header_size": "h3",
+          "_css_classes": "pft-h3"
+         },
+         "elements": []
+        },
+        {
+         "id": "5dae7f6",
+         "elType": "container",
+         "isInner": true,
+         "settings": {
+          "flex_direction": "row",
+          "flex_gap": {
+           "unit": "px",
+           "size": 16,
+           "column": "16",
+           "row": "16",
+           "isLinked": true
+          },
+          "padding": {
+           "unit": "px",
+           "top": "0",
+           "right": "0",
+           "bottom": "0",
+           "left": "0",
+           "isLinked": false
+          },
+          "content_width": "full",
+          "flex_direction_mobile": "column",
+          "flex_gap_mobile": {
+           "unit": "px",
+           "size": 12,
+           "column": "12",
+           "row": "12",
+           "isLinked": true
+          }
+         },
+         "elements": [
+          {
+           "id": "2d7a054",
+           "elType": "container",
+           "isInner": true,
+           "settings": {
+            "flex_direction": "column",
+            "flex_gap": {
+             "unit": "px",
+             "size": 10,
+             "column": "10",
+             "row": "10",
+             "isLinked": true
+            },
+            "padding": {
+             "unit": "px",
+             "top": "16",
+             "right": "16",
+             "bottom": "16",
+             "left": "16",
+             "isLinked": false
+            },
+            "content_width": "full",
+            "_flex_size": "grow",
+            "width_mobile": {
+             "unit": "%",
+             "size": 100,
+             "sizes": []
+            },
+            "css_classes": "pft-value"
+           },
+           "elements": [
+            {
+             "id": "4c93894",
+             "elType": "widget",
+             "widgetType": "icon",
+             "settings": {
+              "selected_icon": {
+               "value": "fas fa-fire-alt",
+               "library": "fa-solid"
+              },
+              "align": "left"
+             },
+             "elements": []
+            },
+            {
+             "id": "2cd672a",
+             "elType": "widget",
+             "widgetType": "text-editor",
+             "settings": {
+              "editor": "<p>Strength Over<br>Comparison</p>"
+             },
+             "elements": []
+            }
+           ]
+          },
+          {
+           "id": "ea8a9ea",
+           "elType": "container",
+           "isInner": true,
+           "settings": {
+            "flex_direction": "column",
+            "flex_gap": {
+             "unit": "px",
+             "size": 10,
+             "column": "10",
+             "row": "10",
+             "isLinked": true
+            },
+            "padding": {
+             "unit": "px",
+             "top": "16",
+             "right": "16",
+             "bottom": "16",
+             "left": "16",
+             "isLinked": false
+            },
+            "content_width": "full",
+            "_flex_size": "grow",
+            "width_mobile": {
+             "unit": "%",
+             "size": 100,
+             "sizes": []
+            },
+            "css_classes": "pft-value"
+           },
+           "elements": [
+            {
+             "id": "4d3a76c",
+             "elType": "widget",
+             "widgetType": "icon",
+             "settings": {
+              "selected_icon": {
+               "value": "fas fa-bolt",
+               "library": "fa-solid"
+              },
+              "align": "left"
+             },
+             "elements": []
+            },
+            {
+             "id": "1e61cf8",
+             "elType": "widget",
+             "widgetType": "text-editor",
+             "settings": {
+              "editor": "<p>Balance Over<br>Extremes</p>"
+             },
+             "elements": []
+            }
+           ]
+          },
+          {
+           "id": "84fe394",
+           "elType": "container",
+           "isInner": true,
+           "settings": {
+            "flex_direction": "column",
+            "flex_gap": {
+             "unit": "px",
+             "size": 10,
+             "column": "10",
+             "row": "10",
+             "isLinked": true
+            },
+            "padding": {
+             "unit": "px",
+             "top": "16",
+             "right": "16",
+             "bottom": "16",
+             "left": "16",
+             "isLinked": false
+            },
+            "content_width": "full",
+            "_flex_size": "grow",
+            "width_mobile": {
+             "unit": "%",
+             "size": 100,
+             "sizes": []
+            },
+            "css_classes": "pft-value"
+           },
+           "elements": [
+            {
+             "id": "4b3027e",
+             "elType": "widget",
+             "widgetType": "icon",
+             "settings": {
+              "selected_icon": {
+               "value": "fas fa-crown",
+               "library": "fa-solid"
+              },
+              "align": "left"
+             },
+             "elements": []
+            },
+            {
+             "id": "91d3fd5",
+             "elType": "widget",
+             "widgetType": "text-editor",
+             "settings": {
+              "editor": "<p>Habits Over<br>Quick Fixes</p>"
+             },
+             "elements": []
+            }
+           ]
+          }
+         ]
+        }
+       ]
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "id": "af78c2b",
+   "elType": "container",
+   "isInner": false,
+   "settings": {
+    "flex_direction": "row",
+    "flex_gap": {
+     "unit": "px",
+     "size": 120,
+     "column": "120",
+     "row": "120",
+     "isLinked": true
+    },
+    "padding": {
+     "unit": "px",
+     "top": "0",
+     "right": "0",
+     "bottom": "130",
+     "left": "0",
+     "isLinked": false
+    },
+    "content_width": "boxed",
+    "boxed_width": {
+     "unit": "px",
+     "size": 1120,
+     "sizes": []
+    },
+    "flex_align_items": "center",
+    "flex_justify_content": "center",
+    "flex_wrap": "wrap",
+    "flex_gap_tablet": {
+     "unit": "px",
+     "size": 64,
+     "column": "64",
+     "row": "64",
+     "isLinked": true
+    },
+    "padding_tablet": {
+     "unit": "px",
+     "top": "0",
+     "right": "24",
+     "bottom": "96",
+     "left": "24",
+     "isLinked": false
+    },
+    "flex_gap_mobile": {
+     "unit": "px",
+     "size": 32,
+     "column": "32",
+     "row": "32",
+     "isLinked": true
+    },
+    "padding_mobile": {
+     "unit": "px",
+     "top": "0",
+     "right": "20",
+     "bottom": "72",
+     "left": "20",
+     "isLinked": false
+    },
+    "css_classes": "pft-section pft-logos"
+   },
+   "elements": [
+    {
+     "id": "69eba1f",
+     "elType": "widget",
+     "widgetType": "image",
+     "settings": {
+      "image": {
+       "url": "https://raw.githubusercontent.com/mariemmejri23-create/Personal-fitness-ytainer/claude/wordpress-elementor-design-4l07jm/assets/images/logo-issa.png",
+       "id": "",
+       "alt": "ISSA",
+       "source": "library"
+      },
+      "image_size": "full"
+     },
+     "elements": []
+    },
+    {
+     "id": "a03139d",
+     "elType": "widget",
+     "widgetType": "image",
+     "settings": {
+      "image": {
+       "url": "https://raw.githubusercontent.com/mariemmejri23-create/Personal-fitness-ytainer/claude/wordpress-elementor-design-4l07jm/assets/images/logo-nasm.png",
+       "id": "",
+       "alt": "NASM",
+       "source": "library"
+      },
+      "image_size": "full"
+     },
+     "elements": []
+    },
+    {
+     "id": "58d3171",
+     "elType": "widget",
+     "widgetType": "image",
+     "settings": {
+      "image": {
+       "url": "https://raw.githubusercontent.com/mariemmejri23-create/Personal-fitness-ytainer/claude/wordpress-elementor-design-4l07jm/assets/images/logo-ace.png",
+       "id": "",
+       "alt": "ACE",
+       "source": "library"
+      },
+      "image_size": "full"
+     },
+     "elements": []
+    },
+    {
+     "id": "13d5e59",
+     "elType": "widget",
+     "widgetType": "image",
+     "settings": {
+      "image": {
+       "url": "https://raw.githubusercontent.com/mariemmejri23-create/Personal-fitness-ytainer/claude/wordpress-elementor-design-4l07jm/assets/images/logo-afaa.png",
+       "id": "",
+       "alt": "AFAA",
+       "source": "library"
+      },
+      "image_size": "full"
+     },
+     "elements": []
+    }
+   ]
+  },
+  {
+   "id": "5bb0eca",
+   "elType": "container",
+   "isInner": false,
+   "settings": {
+    "flex_direction": "row",
+    "flex_gap": {
+     "unit": "px",
+     "size": 40,
+     "column": "40",
+     "row": "40",
+     "isLinked": true
+    },
+    "padding": {
+     "unit": "px",
+     "top": "124",
+     "right": "0",
+     "bottom": "124",
+     "left": "0",
+     "isLinked": false
+    },
+    "content_width": "boxed",
+    "boxed_width": {
+     "unit": "px",
+     "size": 1120,
+     "sizes": []
+    },
+    "flex_align_items": "center",
+    "flex_justify_content": "space-between",
+    "background_background": "classic",
+    "background_color": "#121212",
+    "_element_id": "services",
+    "flex_direction_tablet": "column",
+    "padding_tablet": {
+     "unit": "px",
+     "top": "72",
+     "right": "24",
+     "bottom": "72",
+     "left": "24",
+     "isLinked": false
+    },
+    "flex_gap_tablet": {
+     "unit": "px",
+     "size": 48,
+     "column": "48",
+     "row": "48",
+     "isLinked": true
+    },
+    "flex_direction_mobile": "column",
+    "padding_mobile": {
+     "unit": "px",
+     "top": "56",
+     "right": "20",
+     "bottom": "56",
+     "left": "20",
+     "isLinked": false
+    },
+    "flex_gap_mobile": {
+     "unit": "px",
+     "size": 40,
+     "column": "40",
+     "row": "40",
+     "isLinked": true
+    },
+    "css_classes": "pft-section pft-services"
+   },
+   "elements": [
+    {
+     "id": "a78f5de",
+     "elType": "container",
+     "isInner": true,
+     "settings": {
+      "flex_direction": "column",
+      "flex_gap": {
+       "unit": "px",
+       "size": 16,
+       "column": "16",
+       "row": "16",
+       "isLinked": true
+      },
+      "padding": {
+       "unit": "px",
+       "top": "0",
+       "right": "0",
+       "bottom": "0",
+       "left": "0",
+       "isLinked": false
+      },
+      "content_width": "full",
+      "width": {
+       "unit": "%",
+       "size": 40,
+       "sizes": []
+      },
+      "flex_align_items": "flex-start",
+      "flex_justify_content": "center",
+      "width_tablet": {
+       "unit": "%",
+       "size": 100,
+       "sizes": []
+      },
+      "width_mobile": {
+       "unit": "%",
+       "size": 100,
+       "sizes": []
+      },
+      "css_classes": "pft-services-intro"
+     },
+     "elements": [
+      {
+       "id": "8dd6a2b",
+       "elType": "widget",
+       "widgetType": "heading",
+       "settings": {
+        "title": "Services",
+        "header_size": "div",
+        "_css_classes": "pft-label"
+       },
+       "elements": []
+      },
+      {
+       "id": "df8a514",
+       "elType": "widget",
+       "widgetType": "heading",
+       "settings": {
+        "title": "Choose the support<br>that fits your life",
+        "header_size": "h2",
+        "_css_classes": "pft-h2"
+       },
+       "elements": []
+      },
+      {
+       "id": "98f2085",
+       "elType": "widget",
+       "widgetType": "text-editor",
+       "settings": {
+        "editor": "<p>Flexible options to fit every budget and lifestyle, all packages includes nutrition guidance and on-going weekly support</p>",
+        "_css_classes": "pft-intro"
+       },
+       "elements": []
+      },
+      {
+       "id": "92bd4ad",
+       "elType": "widget",
+       "widgetType": "button",
+       "settings": {
+        "text": "Get Started with Rachel",
+        "link": {
+         "url": "#programs",
+         "is_external": "",
+         "nofollow": ""
+        },
+        "selected_icon": {
+         "value": "fas fa-arrow-right",
+         "library": "fa-solid"
+        },
+        "icon_align": "right",
+        "size": "sm",
+        "_css_classes": "pft-btn"
+       },
+       "elements": []
+      }
+     ]
+    },
+    {
+     "id": "52a1b33",
+     "elType": "container",
+     "isInner": true,
+     "settings": {
+      "flex_direction": "column",
+      "flex_gap": {
+       "unit": "px",
+       "size": 14,
+       "column": "14",
+       "row": "14",
+       "isLinked": true
+      },
+      "padding": {
+       "unit": "px",
+       "top": "0",
+       "right": "0",
+       "bottom": "0",
+       "left": "0",
+       "isLinked": false
+      },
+      "content_width": "full",
+      "width": {
+       "unit": "%",
+       "size": 48.2,
+       "sizes": []
+      },
+      "width_tablet": {
+       "unit": "%",
+       "size": 100,
+       "sizes": []
+      },
+      "width_mobile": {
+       "unit": "%",
+       "size": 100,
+       "sizes": []
+      }
+     },
+     "elements": [
+      {
+       "id": "2382a3e",
+       "elType": "container",
+       "isInner": true,
+       "settings": {
+        "flex_direction": "row",
+        "flex_gap": {
+         "unit": "px",
+         "size": 14,
+         "column": "14",
+         "row": "14",
+         "isLinked": true
+        },
+        "padding": {
+         "unit": "px",
+         "top": "0",
+         "right": "0",
+         "bottom": "0",
+         "left": "0",
+         "isLinked": false
+        },
+        "content_width": "full",
+        "flex_justify_content": "space-between",
+        "flex_direction_mobile": "column"
+       },
+       "elements": [
+        {
+         "id": "a6ab0df",
+         "elType": "container",
+         "isInner": true,
+         "settings": {
+          "flex_direction": "column",
+          "flex_gap": {
+           "unit": "px",
+           "size": 24,
+           "column": "24",
+           "row": "24",
+           "isLinked": true
+          },
+          "padding": {
+           "unit": "px",
+           "top": "24",
+           "right": "24",
+           "bottom": "24",
+           "left": "24",
+           "isLinked": false
+          },
+          "content_width": "full",
+          "width": {
+           "unit": "%",
+           "size": 48.7,
+           "sizes": []
+          },
+          "flex_justify_content": "space-between",
+          "min_height": {
+           "unit": "px",
+           "size": 362,
+           "sizes": []
+          },
+          "width_mobile": {
+           "unit": "%",
+           "size": 100,
+           "sizes": []
+          },
+          "min_height_mobile": {
+           "unit": "px",
+           "size": 280,
+           "sizes": []
+          },
+          "css_classes": "pft-card"
+         },
+         "elements": [
+          {
+           "id": "780cf77",
+           "elType": "widget",
+           "widgetType": "heading",
+           "settings": {
+            "title": "NYC",
+            "header_size": "div",
+            "_css_classes": "pft-city"
+           },
+           "elements": []
+          },
+          {
+           "id": "48574a3",
+           "elType": "container",
+           "isInner": true,
+           "settings": {
+            "flex_direction": "column",
+            "flex_gap": {
+             "unit": "px",
+             "size": 6,
+             "column": "6",
+             "row": "6",
+             "isLinked": true
+            },
+            "padding": {
+             "unit": "px",
+             "top": "0",
+             "right": "0",
+             "bottom": "0",
+             "left": "0",
+             "isLinked": false
+            },
+            "content_width": "full"
+           },
+           "elements": [
+            {
+             "id": "2b4f886",
+             "elType": "widget",
+             "widgetType": "heading",
+             "settings": {
+              "title": "In-Person Training",
+              "header_size": "h3",
+              "_css_classes": "pft-h3"
+             },
+             "elements": []
+            },
+            {
+             "id": "d9734e4",
+             "elType": "widget",
+             "widgetType": "text-editor",
+             "settings": {
+              "editor": "<p>Train face-to-face with personalized coaching and real-time feedback.</p>",
+              "_css_classes": "pft-card-text"
+             },
+             "elements": []
+            }
+           ]
+          }
+         ]
+        },
+        {
+         "id": "b623aec",
+         "elType": "container",
+         "isInner": true,
+         "settings": {
+          "flex_direction": "column",
+          "flex_gap": {
+           "unit": "px",
+           "size": 14,
+           "column": "14",
+           "row": "14",
+           "isLinked": true
+          },
+          "padding": {
+           "unit": "px",
+           "top": "0",
+           "right": "0",
+           "bottom": "0",
+           "left": "0",
+           "isLinked": false
+          },
+          "content_width": "full",
+          "width": {
+           "unit": "%",
+           "size": 48.7,
+           "sizes": []
+          },
+          "width_mobile": {
+           "unit": "%",
+           "size": 100,
+           "sizes": []
+          }
+         },
+         "elements": [
+          {
+           "id": "ef88d58",
+           "elType": "container",
+           "isInner": true,
+           "settings": {
+            "flex_direction": "column",
+            "flex_gap": {
+             "unit": "px",
+             "size": 24,
+             "column": "24",
+             "row": "24",
+             "isLinked": true
+            },
+            "padding": {
+             "unit": "px",
+             "top": "24",
+             "right": "24",
+             "bottom": "24",
+             "left": "24",
+             "isLinked": false
+            },
+            "content_width": "full",
+            "flex_justify_content": "space-between",
+            "_flex_size": "grow",
+            "css_classes": "pft-card"
+           },
+           "elements": [
+            {
+             "id": "e1fd713",
+             "elType": "widget",
+             "widgetType": "icon",
+             "settings": {
+              "selected_icon": {
+               "value": "fas fa-video",
+               "library": "fa-solid"
+              },
+              "align": "left"
+             },
+             "elements": []
+            },
+            {
+             "id": "65a5749",
+             "elType": "container",
+             "isInner": true,
+             "settings": {
+              "flex_direction": "column",
+              "flex_gap": {
+               "unit": "px",
+               "size": 6,
+               "column": "6",
+               "row": "6",
+               "isLinked": true
+              },
+              "padding": {
+               "unit": "px",
+               "top": "0",
+               "right": "0",
+               "bottom": "0",
+               "left": "0",
+               "isLinked": false
+              },
+              "content_width": "full"
+             },
+             "elements": [
+              {
+               "id": "63fdecf",
+               "elType": "widget",
+               "widgetType": "heading",
+               "settings": {
+                "title": "Online Coaching",
+                "header_size": "h3",
+                "_css_classes": "pft-h3"
+               },
+               "elements": []
+              },
+              {
+               "id": "987ead1",
+               "elType": "widget",
+               "widgetType": "text-editor",
+               "settings": {
+                "editor": "<p>Flexible sessions from anywhere &mdash; your program, your schedule.</p>",
+                "_css_classes": "pft-card-text"
+               },
+               "elements": []
+              }
+             ]
+            }
+           ]
+          },
+          {
+           "id": "1e2a537",
+           "elType": "container",
+           "isInner": true,
+           "settings": {
+            "flex_direction": "column",
+            "flex_gap": {
+             "unit": "px",
+             "size": 24,
+             "column": "24",
+             "row": "24",
+             "isLinked": true
+            },
+            "padding": {
+             "unit": "px",
+             "top": "24",
+             "right": "24",
+             "bottom": "24",
+             "left": "24",
+             "isLinked": false
+            },
+            "content_width": "full",
+            "flex_justify_content": "space-between",
+            "_flex_size": "grow",
+            "css_classes": "pft-card"
+           },
+           "elements": [
+            {
+             "id": "65969c9",
+             "elType": "widget",
+             "widgetType": "icon",
+             "settings": {
+              "selected_icon": {
+               "value": "fas fa-tasks",
+               "library": "fa-solid"
+              },
+              "align": "left"
+             },
+             "elements": []
+            },
+            {
+             "id": "5b3b59c",
+             "elType": "container",
+             "isInner": true,
+             "settings": {
+              "flex_direction": "column",
+              "flex_gap": {
+               "unit": "px",
+               "size": 6,
+               "column": "6",
+               "row": "6",
+               "isLinked": true
+              },
+              "padding": {
+               "unit": "px",
+               "top": "0",
+               "right": "0",
+               "bottom": "0",
+               "left": "0",
+               "isLinked": false
+              },
+              "content_width": "full"
+             },
+             "elements": [
+              {
+               "id": "598f494",
+               "elType": "widget",
+               "widgetType": "heading",
+               "settings": {
+                "title": "Nutrition plans",
+                "header_size": "h3",
+                "_css_classes": "pft-h3"
+               },
+               "elements": []
+              },
+              {
+               "id": "a44bed7",
+               "elType": "widget",
+               "widgetType": "text-editor",
+               "settings": {
+                "editor": "<p>Tailored guidance to support your training and daily routine.</p>",
+                "_css_classes": "pft-card-text"
+               },
+               "elements": []
+              }
+             ]
+            }
+           ]
+          }
+         ]
+        }
+       ]
+      },
+      {
+       "id": "e729465",
+       "elType": "container",
+       "isInner": true,
+       "settings": {
+        "flex_direction": "row",
+        "flex_gap": {
+         "unit": "px",
+         "size": 24,
+         "column": "24",
+         "row": "24",
+         "isLinked": true
+        },
+        "padding": {
+         "unit": "px",
+         "top": "24",
+         "right": "24",
+         "bottom": "24",
+         "left": "24",
+         "isLinked": false
+        },
+        "content_width": "full",
+        "min_height": {
+         "unit": "px",
+         "size": 415,
+         "sizes": []
+        },
+        "flex_direction_mobile": "column",
+        "css_classes": "pft-card"
+       },
+       "elements": [
+        {
+         "id": "bad4bb5",
+         "elType": "container",
+         "isInner": true,
+         "settings": {
+          "flex_direction": "column",
+          "flex_gap": {
+           "unit": "px",
+           "size": 24,
+           "column": "24",
+           "row": "24",
+           "isLinked": true
+          },
+          "padding": {
+           "unit": "px",
+           "top": "0",
+           "right": "0",
+           "bottom": "0",
+           "left": "0",
+           "isLinked": false
+          },
+          "content_width": "full",
+          "width": {
+           "unit": "%",
+           "size": 50,
+           "sizes": []
+          },
+          "flex_justify_content": "space-between",
+          "_flex_size": "grow",
+          "width_mobile": {
+           "unit": "%",
+           "size": 100,
+           "sizes": []
+          }
+         },
+         "elements": [
+          {
+           "id": "ff00988",
+           "elType": "widget",
+           "widgetType": "icon",
+           "settings": {
+            "selected_icon": {
+             "value": "fas fa-user-friends",
+             "library": "fa-solid"
+            },
+            "align": "left"
+           },
+           "elements": []
+          },
+          {
+           "id": "786b812",
+           "elType": "container",
+           "isInner": true,
+           "settings": {
+            "flex_direction": "column",
+            "flex_gap": {
+             "unit": "px",
+             "size": 6,
+             "column": "6",
+             "row": "6",
+             "isLinked": true
+            },
+            "padding": {
+             "unit": "px",
+             "top": "0",
+             "right": "0",
+             "bottom": "0",
+             "left": "0",
+             "isLinked": false
+            },
+            "content_width": "full"
+           },
+           "elements": [
+            {
+             "id": "151d825",
+             "elType": "widget",
+             "widgetType": "heading",
+             "settings": {
+              "title": "Business or Group Training",
+              "header_size": "h3",
+              "_css_classes": "pft-h3"
+             },
+             "elements": []
+            },
+            {
+             "id": "19d0914",
+             "elType": "widget",
+             "widgetType": "text-editor",
+             "settings": {
+              "editor": "<p>Designed for teams or partners who want shared motivation and accountability.</p>",
+              "_css_classes": "pft-card-text"
+             },
+             "elements": []
+            }
+           ]
+          }
+         ]
+        },
+        {
+         "id": "0e77f8c",
+         "elType": "container",
+         "isInner": true,
+         "settings": {
+          "flex_direction": "column",
+          "flex_gap": {
+           "unit": "px",
+           "size": 0,
+           "column": "0",
+           "row": "0",
+           "isLinked": true
+          },
+          "padding": {
+           "unit": "px",
+           "top": "0",
+           "right": "0",
+           "bottom": "0",
+           "left": "0",
+           "isLinked": false
+          },
+          "content_width": "full",
+          "width": {
+           "unit": "%",
+           "size": 45.9,
+           "sizes": []
+          },
+          "width_mobile": {
+           "unit": "%",
+           "size": 100,
+           "sizes": []
+          }
+         },
+         "elements": [
+          {
+           "id": "6803b72",
+           "elType": "widget",
+           "widgetType": "image",
+           "settings": {
+            "image": {
+             "url": "https://raw.githubusercontent.com/mariemmejri23-create/Personal-fitness-ytainer/claude/wordpress-elementor-design-4l07jm/assets/images/service-group.jpg",
+             "id": "",
+             "alt": "Group training",
+             "source": "library"
+            },
+            "image_size": "full",
+            "_css_classes": "pft-card-img"
+           },
+           "elements": []
+          }
+         ]
+        }
+       ]
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "id": "b0e166a",
+   "elType": "container",
+   "isInner": false,
+   "settings": {
+    "flex_direction": "row",
+    "flex_gap": {
+     "unit": "px",
+     "size": 40,
+     "column": "40",
+     "row": "40",
+     "isLinked": true
+    },
+    "padding": {
+     "unit": "px",
+     "top": "96",
+     "right": "0",
+     "bottom": "96",
+     "left": "0",
+     "isLinked": false
+    },
+    "content_width": "boxed",
+    "boxed_width": {
+     "unit": "px",
+     "size": 1120,
+     "sizes": []
+    },
+    "flex_justify_content": "space-between",
+    "_element_id": "how-it-works",
+    "flex_direction_tablet": "column",
+    "padding_tablet": {
+     "unit": "px",
+     "top": "72",
+     "right": "24",
+     "bottom": "72",
+     "left": "24",
+     "isLinked": false
+    },
+    "flex_gap_tablet": {
+     "unit": "px",
+     "size": 48,
+     "column": "48",
+     "row": "48",
+     "isLinked": true
+    },
+    "flex_direction_mobile": "column",
+    "padding_mobile": {
+     "unit": "px",
+     "top": "56",
+     "right": "20",
+     "bottom": "56",
+     "left": "20",
+     "isLinked": false
+    },
+    "flex_gap_mobile": {
+     "unit": "px",
+     "size": 40,
+     "column": "40",
+     "row": "40",
+     "isLinked": true
+    },
+    "css_classes": "pft-section pft-process"
+   },
+   "elements": [
+    {
+     "id": "b621dad",
+     "elType": "container",
+     "isInner": true,
+     "settings": {
+      "flex_direction": "column",
+      "flex_gap": {
+       "unit": "px",
+       "size": 24,
+       "column": "24",
+       "row": "24",
+       "isLinked": true
+      },
+      "padding": {
+       "unit": "px",
+       "top": "0",
+       "right": "0",
+       "bottom": "0",
+       "left": "0",
+       "isLinked": false
+      },
+      "content_width": "full",
+      "width": {
+       "unit": "%",
+       "size": 48.2,
+       "sizes": []
+      },
+      "width_tablet": {
+       "unit": "%",
+       "size": 100,
+       "sizes": []
+      },
+      "width_mobile": {
+       "unit": "%",
+       "size": 100,
+       "sizes": []
+      }
+     },
+     "elements": [
+      {
+       "id": "e538e8c",
+       "elType": "container",
+       "isInner": true,
+       "settings": {
+        "flex_direction": "column",
+        "flex_gap": {
+         "unit": "px",
+         "size": 16,
+         "column": "16",
+         "row": "16",
+         "isLinked": true
+        },
+        "padding": {
+         "unit": "px",
+         "top": "0",
+         "right": "0",
+         "bottom": "0",
+         "left": "0",
+         "isLinked": false
+        },
+        "content_width": "full",
+        "flex_align_items": "flex-start"
+       },
+       "elements": [
+        {
+         "id": "aa535f5",
+         "elType": "widget",
+         "widgetType": "heading",
+         "settings": {
+          "title": "How it works",
+          "header_size": "div",
+          "_css_classes": "pft-label"
+         },
+         "elements": []
+        },
+        {
+         "id": "2fb46cf",
+         "elType": "widget",
+         "widgetType": "heading",
+         "settings": {
+          "title": "Your path to<br>lasting results",
+          "header_size": "h2",
+          "_css_classes": "pft-h2"
+         },
+         "elements": []
+        },
+        {
+         "id": "6ae76d9",
+         "elType": "widget",
+         "widgetType": "text-editor",
+         "settings": {
+          "editor": "<p>Every transformation starts with structure. Here&rsquo;s how we turn goals into real progress &mdash; one step at a time.</p>"
+         },
+         "elements": []
+        },
+        {
+         "id": "5faac3c",
+         "elType": "widget",
+         "widgetType": "button",
+         "settings": {
+          "text": "Book Your Free Call",
+          "link": {
+           "url": "#contact",
+           "is_external": "",
+           "nofollow": ""
+          },
+          "selected_icon": {
+           "value": "fas fa-arrow-right",
+           "library": "fa-solid"
+          },
+          "icon_align": "right",
+          "size": "sm",
+          "_css_classes": "pft-btn"
+         },
+         "elements": []
+        }
+       ]
+      },
+      {
+       "id": "dd2ea45",
+       "elType": "widget",
+       "widgetType": "image",
+       "settings": {
+        "image": {
+         "url": "https://raw.githubusercontent.com/mariemmejri23-create/Personal-fitness-ytainer/claude/wordpress-elementor-design-4l07jm/assets/images/process.jpg",
+         "id": "",
+         "alt": "Coaching session",
+         "source": "library"
+        },
+        "image_size": "full",
+        "_css_classes": "pft-img"
+       },
+       "elements": []
+      }
+     ]
+    },
+    {
+     "id": "d3b2cd1",
+     "elType": "container",
+     "isInner": true,
+     "settings": {
+      "flex_direction": "column",
+      "flex_gap": {
+       "unit": "px",
+       "size": 40,
+       "column": "40",
+       "row": "40",
+       "isLinked": true
+      },
+      "padding": {
+       "unit": "px",
+       "top": "0",
+       "right": "0",
+       "bottom": "0",
+       "left": "0",
+       "isLinked": false
+      },
+      "content_width": "full",
+      "width": {
+       "unit": "%",
+       "size": 48.2,
+       "sizes": []
+      },
+      "width_tablet": {
+       "unit": "%",
+       "size": 100,
+       "sizes": []
+      },
+      "width_mobile": {
+       "unit": "%",
+       "size": 100,
+       "sizes": []
+      },
+      "flex_gap_mobile": {
+       "unit": "px",
+       "size": 32,
+       "column": "32",
+       "row": "32",
+       "isLinked": true
+      }
+     },
+     "elements": [
+      {
+       "id": "0aaa15f",
+       "elType": "container",
+       "isInner": true,
+       "settings": {
+        "flex_direction": "column",
+        "flex_gap": {
+         "unit": "px",
+         "size": 6,
+         "column": "6",
+         "row": "6",
+         "isLinked": true
+        },
+        "padding": {
+         "unit": "px",
+         "top": "0",
+         "right": "0",
+         "bottom": "0",
+         "left": "0",
+         "isLinked": false
+        },
+        "content_width": "full"
+       },
+       "elements": [
+        {
+         "id": "ea1b56a",
+         "elType": "widget",
+         "widgetType": "heading",
+         "settings": {
+          "title": "01",
+          "header_size": "div",
+          "_css_classes": "pft-step-num"
+         },
+         "elements": []
+        },
+        {
+         "id": "eccc343",
+         "elType": "widget",
+         "widgetType": "heading",
+         "settings": {
+          "title": "Discovery call",
+          "header_size": "h3",
+          "_css_classes": "pft-step-title"
+         },
+         "elements": []
+        },
+        {
+         "id": "4d5538a",
+         "elType": "widget",
+         "widgetType": "text-editor",
+         "settings": {
+          "editor": "<p>We&rsquo;ll explore your goals, challenges, and lifestyle to create the right approach.</p>",
+          "_css_classes": "pft-muted"
+         },
+         "elements": []
+        }
+       ]
+      },
+      {
+       "id": "a4f5a42",
+       "elType": "container",
+       "isInner": true,
+       "settings": {
+        "flex_direction": "column",
+        "flex_gap": {
+         "unit": "px",
+         "size": 6,
+         "column": "6",
+         "row": "6",
+         "isLinked": true
+        },
+        "padding": {
+         "unit": "px",
+         "top": "0",
+         "right": "0",
+         "bottom": "0",
+         "left": "0",
+         "isLinked": false
+        },
+        "content_width": "full"
+       },
+       "elements": [
+        {
+         "id": "f2b78b4",
+         "elType": "widget",
+         "widgetType": "heading",
+         "settings": {
+          "title": "02",
+          "header_size": "div",
+          "_css_classes": "pft-step-num"
+         },
+         "elements": []
+        },
+        {
+         "id": "7e8cc05",
+         "elType": "widget",
+         "widgetType": "heading",
+         "settings": {
+          "title": "Personalized Plan",
+          "header_size": "h3",
+          "_css_classes": "pft-step-title"
+         },
+         "elements": []
+        },
+        {
+         "id": "7d0aef2",
+         "elType": "widget",
+         "widgetType": "text-editor",
+         "settings": {
+          "editor": "<p>Training and nutrition tailored to your lifestyle &mdash; realistic, flexible, and sustainable.</p>",
+          "_css_classes": "pft-muted"
+         },
+         "elements": []
+        }
+       ]
+      },
+      {
+       "id": "4d2ebd8",
+       "elType": "container",
+       "isInner": true,
+       "settings": {
+        "flex_direction": "column",
+        "flex_gap": {
+         "unit": "px",
+         "size": 6,
+         "column": "6",
+         "row": "6",
+         "isLinked": true
+        },
+        "padding": {
+         "unit": "px",
+         "top": "0",
+         "right": "0",
+         "bottom": "0",
+         "left": "0",
+         "isLinked": false
+        },
+        "content_width": "full"
+       },
+       "elements": [
+        {
+         "id": "b915f86",
+         "elType": "widget",
+         "widgetType": "heading",
+         "settings": {
+          "title": "03",
+          "header_size": "div",
+          "_css_classes": "pft-step-num"
+         },
+         "elements": []
+        },
+        {
+         "id": "1f77cd2",
+         "elType": "widget",
+         "widgetType": "heading",
+         "settings": {
+          "title": "Weekly Coaching",
+          "header_size": "h3",
+          "_css_classes": "pft-step-title"
+         },
+         "elements": []
+        },
+        {
+         "id": "baa7d99",
+         "elType": "widget",
+         "widgetType": "text-editor",
+         "settings": {
+          "editor": "<p>Weekly check-ins, form reviews and adjustments so you always know your next step.</p>",
+          "_css_classes": "pft-muted"
+         },
+         "elements": []
+        }
+       ]
+      },
+      {
+       "id": "36055fb",
+       "elType": "container",
+       "isInner": true,
+       "settings": {
+        "flex_direction": "column",
+        "flex_gap": {
+         "unit": "px",
+         "size": 6,
+         "column": "6",
+         "row": "6",
+         "isLinked": true
+        },
+        "padding": {
+         "unit": "px",
+         "top": "0",
+         "right": "0",
+         "bottom": "0",
+         "left": "0",
+         "isLinked": false
+        },
+        "content_width": "full"
+       },
+       "elements": [
+        {
+         "id": "76b509b",
+         "elType": "widget",
+         "widgetType": "heading",
+         "settings": {
+          "title": "04",
+          "header_size": "div",
+          "_css_classes": "pft-step-num"
+         },
+         "elements": []
+        },
+        {
+         "id": "d6c0d06",
+         "elType": "widget",
+         "widgetType": "heading",
+         "settings": {
+          "title": "Lifestyle Integration",
+          "header_size": "h3",
+          "_css_classes": "pft-step-title"
+         },
+         "elements": []
+        },
+        {
+         "id": "f18a4d6",
+         "elType": "widget",
+         "widgetType": "text-editor",
+         "settings": {
+          "editor": "<p>We adapt your plan as your schedule, cycle, and needs shift</p>",
+          "_css_classes": "pft-muted"
+         },
+         "elements": []
+        }
+       ]
+      },
+      {
+       "id": "4aa0d35",
+       "elType": "container",
+       "isInner": true,
+       "settings": {
+        "flex_direction": "column",
+        "flex_gap": {
+         "unit": "px",
+         "size": 6,
+         "column": "6",
+         "row": "6",
+         "isLinked": true
+        },
+        "padding": {
+         "unit": "px",
+         "top": "0",
+         "right": "0",
+         "bottom": "0",
+         "left": "0",
+         "isLinked": false
+        },
+        "content_width": "full"
+       },
+       "elements": [
+        {
+         "id": "000f5d8",
+         "elType": "widget",
+         "widgetType": "heading",
+         "settings": {
+          "title": "05",
+          "header_size": "div",
+          "_css_classes": "pft-step-num"
+         },
+         "elements": []
+        },
+        {
+         "id": "2522726",
+         "elType": "widget",
+         "widgetType": "heading",
+         "settings": {
+          "title": "Long-Term Balance",
+          "header_size": "h3",
+          "_css_classes": "pft-step-title"
+         },
+         "elements": []
+        },
+        {
+         "id": "7311632",
+         "elType": "widget",
+         "widgetType": "text-editor",
+         "settings": {
+          "editor": "<p>Progress doesn&rsquo;t end here &mdash; we&rsquo;ll refine, celebrate, and keep building together</p>",
+          "_css_classes": "pft-muted"
+         },
+         "elements": []
+        }
+       ]
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "id": "9175abd",
+   "elType": "container",
+   "isInner": false,
+   "settings": {
+    "flex_direction": "column",
+    "flex_gap": {
+     "unit": "px",
+     "size": 40,
+     "column": "40",
+     "row": "40",
+     "isLinked": true
+    },
+    "padding": {
+     "unit": "px",
+     "top": "96",
+     "right": "0",
+     "bottom": "96",
+     "left": "0",
+     "isLinked": false
+    },
+    "content_width": "boxed",
+    "boxed_width": {
+     "unit": "px",
+     "size": 1120,
+     "sizes": []
+    },
+    "_element_id": "programs",
+    "padding_tablet": {
+     "unit": "px",
+     "top": "72",
+     "right": "24",
+     "bottom": "72",
+     "left": "24",
+     "isLinked": false
+    },
+    "padding_mobile": {
+     "unit": "px",
+     "top": "56",
+     "right": "20",
+     "bottom": "56",
+     "left": "20",
+     "isLinked": false
+    },
+    "css_classes": "pft-section pft-programs"
+   },
+   "elements": [
+    {
+     "id": "00d65c4",
+     "elType": "container",
+     "isInner": true,
+     "settings": {
+      "flex_direction": "column",
+      "flex_gap": {
+       "unit": "px",
+       "size": 12,
+       "column": "12",
+       "row": "12",
+       "isLinked": true
+      },
+      "padding": {
+       "unit": "px",
+       "top": "0",
+       "right": "280",
+       "bottom": "0",
+       "left": "280",
+       "isLinked": false
+      },
+      "content_width": "full",
+      "flex_align_items": "center",
+      "padding_tablet": {
+       "unit": "px",
+       "top": "0",
+       "right": "40",
+       "bottom": "0",
+       "left": "40",
+       "isLinked": false
+      },
+      "padding_mobile": {
+       "unit": "px",
+       "top": "0",
+       "right": "0",
+       "bottom": "0",
+       "left": "0",
+       "isLinked": false
+      }
+     },
+     "elements": [
+      {
+       "id": "ac9ab4b",
+       "elType": "widget",
+       "widgetType": "heading",
+       "settings": {
+        "title": "For you",
+        "header_size": "div",
+        "align": "center",
+        "_css_classes": "pft-label"
+       },
+       "elements": []
+      },
+      {
+       "id": "e5903d5",
+       "elType": "widget",
+       "widgetType": "heading",
+       "settings": {
+        "title": "Signature Programs!",
+        "header_size": "h2",
+        "align": "center",
+        "_css_classes": "pft-h2"
+       },
+       "elements": []
+      },
+      {
+       "id": "c4e25fa",
+       "elType": "widget",
+       "widgetType": "text-editor",
+       "settings": {
+        "editor": "<p>Choose the program that fits your goals, lifestyle, and pace. Every plan includes personalized workouts, nutrition guidance, and weekly support.</p>",
+        "align": "center"
+       },
+       "elements": []
+      }
+     ]
+    },
+    {
+     "id": "374e4d7",
+     "elType": "container",
+     "isInner": true,
+     "settings": {
+      "flex_direction": "row",
+      "flex_gap": {
+       "unit": "px",
+       "size": 24,
+       "column": "24",
+       "row": "24",
+       "isLinked": true
+      },
+      "padding": {
+       "unit": "px",
+       "top": "0",
+       "right": "0",
+       "bottom": "0",
+       "left": "0",
+       "isLinked": false
+      },
+      "content_width": "full",
+      "flex_align_items": "stretch",
+      "flex_direction_tablet": "column",
+      "flex_direction_mobile": "column"
+     },
+     "elements": [
+      {
+       "id": "2b9d790",
+       "elType": "container",
+       "isInner": true,
+       "settings": {
+        "flex_direction": "column",
+        "flex_gap": {
+         "unit": "px",
+         "size": 24,
+         "column": "24",
+         "row": "24",
+         "isLinked": true
+        },
+        "padding": {
+         "unit": "px",
+         "top": "20",
+         "right": "20",
+         "bottom": "20",
+         "left": "20",
+         "isLinked": false
+        },
+        "content_width": "full",
+        "width": {
+         "unit": "%",
+         "size": 31.8,
+         "sizes": []
+        },
+        "_flex_size": "grow",
+        "width_tablet": {
+         "unit": "%",
+         "size": 100,
+         "sizes": []
+        },
+        "width_mobile": {
+         "unit": "%",
+         "size": 100,
+         "sizes": []
+        },
+        "css_classes": "pft-price-card"
+       },
+       "elements": [
+        {
+         "id": "64ad274",
+         "elType": "widget",
+         "widgetType": "icon",
+         "settings": {
+          "selected_icon": {
+           "value": "fas fa-chart-bar",
+           "library": "fa-solid"
+          },
+          "align": "left",
+          "_css_classes": "pft-price-icon"
+         },
+         "elements": []
+        },
+        {
+         "id": "d32a37e",
+         "elType": "container",
+         "isInner": true,
+         "settings": {
+          "flex_direction": "column",
+          "flex_gap": {
+           "unit": "px",
+           "size": 12,
+           "column": "12",
+           "row": "12",
+           "isLinked": true
+          },
+          "padding": {
+           "unit": "px",
+           "top": "0",
+           "right": "0",
+           "bottom": "0",
+           "left": "0",
+           "isLinked": false
+          },
+          "content_width": "full"
+         },
+         "elements": [
+          {
+           "id": "4316741",
+           "elType": "widget",
+           "widgetType": "heading",
+           "settings": {
+            "title": "12-Week Transformation",
+            "header_size": "h3",
+            "_css_classes": "pft-h3"
+           },
+           "elements": []
+          },
+          {
+           "id": "5c86ef6",
+           "elType": "widget",
+           "widgetType": "heading",
+           "settings": {
+            "title": "$249<span>/month</span>",
+            "header_size": "div",
+            "_css_classes": "pft-price"
+           },
+           "elements": []
+          },
+          {
+           "id": "7e75653",
+           "elType": "widget",
+           "widgetType": "text-editor",
+           "settings": {
+            "editor": "<p>Step-by-step coaching to rebuild strength, improve energy, and see real, lasting results.</p>",
+            "_css_classes": "pft-price-desc"
+           },
+           "elements": []
+          }
+         ]
+        },
+        {
+         "id": "58de9ae",
+         "elType": "container",
+         "isInner": true,
+         "settings": {
+          "flex_direction": "column",
+          "flex_gap": {
+           "unit": "px",
+           "size": 8,
+           "column": "8",
+           "row": "8",
+           "isLinked": true
+          },
+          "padding": {
+           "unit": "px",
+           "top": "0",
+           "right": "0",
+           "bottom": "0",
+           "left": "0",
+           "isLinked": false
+          },
+          "content_width": "full"
+         },
+         "elements": [
+          {
+           "id": "90cfaf3",
+           "elType": "widget",
+           "widgetType": "heading",
+           "settings": {
+            "title": "What&rsquo;s included",
+            "header_size": "div",
+            "_css_classes": "pft-included"
+           },
+           "elements": []
+          },
+          {
+           "id": "d896f39",
+           "elType": "widget",
+           "widgetType": "icon-list",
+           "settings": {
+            "icon_list": [
+             {
+              "_id": "8c00622",
+              "text": "Personalized workouts",
+              "selected_icon": {
+               "value": "fas fa-check",
+               "library": "fa-solid"
+              }
+             },
+             {
+              "_id": "f73fd03",
+              "text": "Weekly Progress tracking",
+              "selected_icon": {
+               "value": "fas fa-check",
+               "library": "fa-solid"
+              }
+             },
+             {
+              "_id": "d0b73a9",
+              "text": "Nutrition fundamentals",
+              "selected_icon": {
+               "value": "fas fa-check",
+               "library": "fa-solid"
+              }
+             },
+             {
+              "_id": "6cd933f",
+              "text": "Chat &amp; email support",
+              "selected_icon": {
+               "value": "fas fa-check",
+               "library": "fa-solid"
+              }
+             }
+            ],
+            "view": "traditional",
+            "_css_classes": "pft-checks"
+           },
+           "elements": []
+          }
+         ]
+        },
+        {
+         "id": "176290a",
+         "elType": "widget",
+         "widgetType": "button",
+         "settings": {
+          "text": "Join the Program",
+          "link": {
+           "url": "#contact",
+           "is_external": "",
+           "nofollow": ""
+          },
+          "selected_icon": {
+           "value": "fas fa-arrow-right",
+           "library": "fa-solid"
+          },
+          "icon_align": "right",
+          "size": "sm",
+          "_css_classes": "pft-btn pft-btn--outline pft-btn--block"
+         },
+         "elements": []
+        }
+       ]
+      },
+      {
+       "id": "1e70936",
+       "elType": "container",
+       "isInner": true,
+       "settings": {
+        "flex_direction": "column",
+        "flex_gap": {
+         "unit": "px",
+         "size": 24,
+         "column": "24",
+         "row": "24",
+         "isLinked": true
+        },
+        "padding": {
+         "unit": "px",
+         "top": "20",
+         "right": "20",
+         "bottom": "20",
+         "left": "20",
+         "isLinked": false
+        },
+        "content_width": "full",
+        "width": {
+         "unit": "%",
+         "size": 31.8,
+         "sizes": []
+        },
+        "_flex_size": "grow",
+        "width_tablet": {
+         "unit": "%",
+         "size": 100,
+         "sizes": []
+        },
+        "width_mobile": {
+         "unit": "%",
+         "size": 100,
+         "sizes": []
+        },
+        "css_classes": "pft-price-card pft-price-card--featured"
+       },
+       "elements": [
+        {
+         "id": "773c0da",
+         "elType": "widget",
+         "widgetType": "icon",
+         "settings": {
+          "selected_icon": {
+           "value": "fas fa-chart-bar",
+           "library": "fa-solid"
+          },
+          "align": "left",
+          "_css_classes": "pft-price-icon"
+         },
+         "elements": []
+        },
+        {
+         "id": "bb54e83",
+         "elType": "widget",
+         "widgetType": "heading",
+         "settings": {
+          "title": "Most Popular",
+          "header_size": "div",
+          "_css_classes": "pft-popular"
+         },
+         "elements": []
+        },
+        {
+         "id": "70fe633",
+         "elType": "container",
+         "isInner": true,
+         "settings": {
+          "flex_direction": "column",
+          "flex_gap": {
+           "unit": "px",
+           "size": 12,
+           "column": "12",
+           "row": "12",
+           "isLinked": true
+          },
+          "padding": {
+           "unit": "px",
+           "top": "0",
+           "right": "0",
+           "bottom": "0",
+           "left": "0",
+           "isLinked": false
+          },
+          "content_width": "full"
+         },
+         "elements": [
+          {
+           "id": "d2fe7d4",
+           "elType": "widget",
+           "widgetType": "heading",
+           "settings": {
+            "title": "Postnatal Reboot",
+            "header_size": "h3",
+            "_css_classes": "pft-h3"
+           },
+           "elements": []
+          },
+          {
+           "id": "dd65eef",
+           "elType": "widget",
+           "widgetType": "heading",
+           "settings": {
+            "title": "$329<span>/month</span>",
+            "header_size": "div",
+            "_css_classes": "pft-price"
+           },
+           "elements": []
+          },
+          {
+           "id": "0a367dd",
+           "elType": "widget",
+           "widgetType": "text-editor",
+           "settings": {
+            "editor": "<p>Gentle, structured recovery for new mothers to help them get confidence and balance again.</p>",
+            "_css_classes": "pft-price-desc"
+           },
+           "elements": []
+          }
+         ]
+        },
+        {
+         "id": "25a5ae9",
+         "elType": "container",
+         "isInner": true,
+         "settings": {
+          "flex_direction": "column",
+          "flex_gap": {
+           "unit": "px",
+           "size": 8,
+           "column": "8",
+           "row": "8",
+           "isLinked": true
+          },
+          "padding": {
+           "unit": "px",
+           "top": "0",
+           "right": "0",
+           "bottom": "0",
+           "left": "0",
+           "isLinked": false
+          },
+          "content_width": "full"
+         },
+         "elements": [
+          {
+           "id": "b56c10c",
+           "elType": "widget",
+           "widgetType": "heading",
+           "settings": {
+            "title": "What&rsquo;s included",
+            "header_size": "div",
+            "_css_classes": "pft-included"
+           },
+           "elements": []
+          },
+          {
+           "id": "b0fb000",
+           "elType": "widget",
+           "widgetType": "icon-list",
+           "settings": {
+            "icon_list": [
+             {
+              "_id": "9ff9207",
+              "text": "Tailored postpartum training plan",
+              "selected_icon": {
+               "value": "fas fa-check",
+               "library": "fa-solid"
+              }
+             },
+             {
+              "_id": "116b719",
+              "text": "Nutrition &amp; recovery coaching",
+              "selected_icon": {
+               "value": "fas fa-check",
+               "library": "fa-solid"
+              }
+             },
+             {
+              "_id": "bb4e667",
+              "text": "Weekly 1-on-1 check-ins",
+              "selected_icon": {
+               "value": "fas fa-check",
+               "library": "fa-solid"
+              }
+             },
+             {
+              "_id": "f8776e5",
+              "text": "Ongoing support between sessions",
+              "selected_icon": {
+               "value": "fas fa-check",
+               "library": "fa-solid"
+              }
+             }
+            ],
+            "view": "traditional",
+            "_css_classes": "pft-checks"
+           },
+           "elements": []
+          }
+         ]
+        },
+        {
+         "id": "6e5df52",
+         "elType": "widget",
+         "widgetType": "button",
+         "settings": {
+          "text": "Join the Program",
+          "link": {
+           "url": "#contact",
+           "is_external": "",
+           "nofollow": ""
+          },
+          "selected_icon": {
+           "value": "fas fa-arrow-right",
+           "library": "fa-solid"
+          },
+          "icon_align": "right",
+          "size": "sm",
+          "_css_classes": "pft-btn pft-btn--outline pft-btn--block"
+         },
+         "elements": []
+        }
+       ]
+      },
+      {
+       "id": "048211b",
+       "elType": "container",
+       "isInner": true,
+       "settings": {
+        "flex_direction": "column",
+        "flex_gap": {
+         "unit": "px",
+         "size": 24,
+         "column": "24",
+         "row": "24",
+         "isLinked": true
+        },
+        "padding": {
+         "unit": "px",
+         "top": "20",
+         "right": "20",
+         "bottom": "20",
+         "left": "20",
+         "isLinked": false
+        },
+        "content_width": "full",
+        "width": {
+         "unit": "%",
+         "size": 31.8,
+         "sizes": []
+        },
+        "_flex_size": "grow",
+        "width_tablet": {
+         "unit": "%",
+         "size": 100,
+         "sizes": []
+        },
+        "width_mobile": {
+         "unit": "%",
+         "size": 100,
+         "sizes": []
+        },
+        "css_classes": "pft-price-card"
+       },
+       "elements": [
+        {
+         "id": "abe3924",
+         "elType": "widget",
+         "widgetType": "icon",
+         "settings": {
+          "selected_icon": {
+           "value": "fas fa-chart-bar",
+           "library": "fa-solid"
+          },
+          "align": "left",
+          "_css_classes": "pft-price-icon"
+         },
+         "elements": []
+        },
+        {
+         "id": "c44f438",
+         "elType": "container",
+         "isInner": true,
+         "settings": {
+          "flex_direction": "column",
+          "flex_gap": {
+           "unit": "px",
+           "size": 12,
+           "column": "12",
+           "row": "12",
+           "isLinked": true
+          },
+          "padding": {
+           "unit": "px",
+           "top": "0",
+           "right": "0",
+           "bottom": "0",
+           "left": "0",
+           "isLinked": false
+          },
+          "content_width": "full"
+         },
+         "elements": [
+          {
+           "id": "caccc04",
+           "elType": "widget",
+           "widgetType": "heading",
+           "settings": {
+            "title": "Tone with Hormone Balance",
+            "header_size": "h3",
+            "_css_classes": "pft-h3"
+           },
+           "elements": []
+          },
+          {
+           "id": "fd9423b",
+           "elType": "widget",
+           "widgetType": "heading",
+           "settings": {
+            "title": "$449<span>/month</span>",
+            "header_size": "div",
+            "_css_classes": "pft-price"
+           },
+           "elements": []
+          },
+          {
+           "id": "84b59e9",
+           "elType": "widget",
+           "widgetType": "text-editor",
+           "settings": {
+            "editor": "<p>Workouts + nutrition designed around your cycle, energy, and hormonal needs</p>",
+            "_css_classes": "pft-price-desc"
+           },
+           "elements": []
+          }
+         ]
+        },
+        {
+         "id": "8c5c0d1",
+         "elType": "container",
+         "isInner": true,
+         "settings": {
+          "flex_direction": "column",
+          "flex_gap": {
+           "unit": "px",
+           "size": 8,
+           "column": "8",
+           "row": "8",
+           "isLinked": true
+          },
+          "padding": {
+           "unit": "px",
+           "top": "0",
+           "right": "0",
+           "bottom": "0",
+           "left": "0",
+           "isLinked": false
+          },
+          "content_width": "full"
+         },
+         "elements": [
+          {
+           "id": "eaae296",
+           "elType": "widget",
+           "widgetType": "heading",
+           "settings": {
+            "title": "What&rsquo;s included",
+            "header_size": "div",
+            "_css_classes": "pft-included"
+           },
+           "elements": []
+          },
+          {
+           "id": "d6e4ac9",
+           "elType": "widget",
+           "widgetType": "icon-list",
+           "settings": {
+            "icon_list": [
+             {
+              "_id": "0d48c43",
+              "text": "Custom periodized training cycles",
+              "selected_icon": {
+               "value": "fas fa-check",
+               "library": "fa-solid"
+              }
+             },
+             {
+              "_id": "3d1489b",
+              "text": "Ready made cooked meals",
+              "selected_icon": {
+               "value": "fas fa-check",
+               "library": "fa-solid"
+              }
+             },
+             {
+              "_id": "97bc322",
+              "text": "Bi-weekly performance reviews",
+              "selected_icon": {
+               "value": "fas fa-check",
+               "library": "fa-solid"
+              }
+             },
+             {
+              "_id": "718cafa",
+              "text": "Priority messaging access",
+              "selected_icon": {
+               "value": "fas fa-check",
+               "library": "fa-solid"
+              }
+             }
+            ],
+            "view": "traditional",
+            "_css_classes": "pft-checks"
+           },
+           "elements": []
+          }
+         ]
+        },
+        {
+         "id": "71ec094",
+         "elType": "widget",
+         "widgetType": "button",
+         "settings": {
+          "text": "Join the Program",
+          "link": {
+           "url": "#contact",
+           "is_external": "",
+           "nofollow": ""
+          },
+          "selected_icon": {
+           "value": "fas fa-arrow-right",
+           "library": "fa-solid"
+          },
+          "icon_align": "right",
+          "size": "sm",
+          "_css_classes": "pft-btn pft-btn--outline pft-btn--block"
+         },
+         "elements": []
+        }
+       ]
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "id": "5f5539a",
+   "elType": "container",
+   "isInner": false,
+   "settings": {
+    "flex_direction": "row",
+    "flex_gap": {
+     "unit": "px",
+     "size": 40,
+     "column": "40",
+     "row": "40",
+     "isLinked": true
+    },
+    "padding": {
+     "unit": "px",
+     "top": "96",
+     "right": "0",
+     "bottom": "96",
+     "left": "0",
+     "isLinked": false
+    },
+    "content_width": "boxed",
+    "boxed_width": {
+     "unit": "px",
+     "size": 1120,
+     "sizes": []
+    },
+    "flex_align_items": "center",
+    "flex_justify_content": "space-between",
+    "_element_id": "results",
+    "flex_direction_tablet": "column",
+    "padding_tablet": {
+     "unit": "px",
+     "top": "72",
+     "right": "24",
+     "bottom": "72",
+     "left": "24",
+     "isLinked": false
+    },
+    "flex_gap_tablet": {
+     "unit": "px",
+     "size": 48,
+     "column": "48",
+     "row": "48",
+     "isLinked": true
+    },
+    "flex_direction_mobile": "column",
+    "padding_mobile": {
+     "unit": "px",
+     "top": "56",
+     "right": "20",
+     "bottom": "56",
+     "left": "20",
+     "isLinked": false
+    },
+    "flex_gap_mobile": {
+     "unit": "px",
+     "size": 40,
+     "column": "40",
+     "row": "40",
+     "isLinked": true
+    },
+    "css_classes": "pft-section pft-results"
+   },
+   "elements": [
+    {
+     "id": "4e37ed9",
+     "elType": "container",
+     "isInner": true,
+     "settings": {
+      "flex_direction": "column",
+      "flex_gap": {
+       "unit": "px",
+       "size": 56,
+       "column": "56",
+       "row": "56",
+       "isLinked": true
+      },
+      "padding": {
+       "unit": "px",
+       "top": "0",
+       "right": "0",
+       "bottom": "0",
+       "left": "0",
+       "isLinked": false
+      },
+      "content_width": "full",
+      "width": {
+       "unit": "%",
+       "size": 45,
+       "sizes": []
+      },
+      "flex_justify_content": "center",
+      "width_tablet": {
+       "unit": "%",
+       "size": 100,
+       "sizes": []
+      },
+      "width_mobile": {
+       "unit": "%",
+       "size": 100,
+       "sizes": []
+      }
+     },
+     "elements": [
+      {
+       "id": "f50c2b1",
+       "elType": "container",
+       "isInner": true,
+       "settings": {
+        "flex_direction": "column",
+        "flex_gap": {
+         "unit": "px",
+         "size": 12,
+         "column": "12",
+         "row": "12",
+         "isLinked": true
+        },
+        "padding": {
+         "unit": "px",
+         "top": "0",
+         "right": "0",
+         "bottom": "0",
+         "left": "0",
+         "isLinked": false
+        },
+        "content_width": "full"
+       },
+       "elements": [
+        {
+         "id": "54d7fd4",
+         "elType": "widget",
+         "widgetType": "heading",
+         "settings": {
+          "title": "Results",
+          "header_size": "div",
+          "_css_classes": "pft-label"
+         },
+         "elements": []
+        },
+        {
+         "id": "fe98822",
+         "elType": "widget",
+         "widgetType": "heading",
+         "settings": {
+          "title": "Progress you can see",
+          "header_size": "h2",
+          "_css_classes": "pft-h2"
+         },
+         "elements": []
+        },
+        {
+         "id": "fb2317b",
+         "elType": "widget",
+         "widgetType": "text-editor",
+         "settings": {
+          "editor": "<p>Every transformation tells a story. These programs are built to help you move better, feel stronger, and see steady progress, without extremes, burnout, or quick fixes.</p>"
+         },
+         "elements": []
+        }
+       ]
+      },
+      {
+       "id": "3eeb748",
+       "elType": "container",
+       "isInner": true,
+       "settings": {
+        "flex_direction": "column",
+        "flex_gap": {
+         "unit": "px",
+         "size": 12,
+         "column": "12",
+         "row": "12",
+         "isLinked": true
+        },
+        "padding": {
+         "unit": "px",
+         "top": "0",
+         "right": "0",
+         "bottom": "0",
+         "left": "0",
+         "isLinked": false
+        },
+        "content_width": "full"
+       },
+       "elements": [
+        {
+         "id": "cecd751",
+         "elType": "widget",
+         "widgetType": "image",
+         "settings": {
+          "image": {
+           "url": "https://raw.githubusercontent.com/mariemmejri23-create/Personal-fitness-ytainer/claude/wordpress-elementor-design-4l07jm/assets/images/avatar-sophie.jpg",
+           "id": "",
+           "alt": "Sophie Lammers",
+           "source": "library"
+          },
+          "image_size": "full",
+          "_css_classes": "pft-avatar pft-avatar--lg"
+         },
+         "elements": []
+        },
+        {
+         "id": "d11ad60",
+         "elType": "container",
+         "isInner": true,
+         "settings": {
+          "flex_direction": "column",
+          "flex_gap": {
+           "unit": "px",
+           "size": 2,
+           "column": "2",
+           "row": "2",
+           "isLinked": true
+          },
+          "padding": {
+           "unit": "px",
+           "top": "0",
+           "right": "0",
+           "bottom": "0",
+           "left": "0",
+           "isLinked": false
+          },
+          "content_width": "full"
+         },
+         "elements": [
+          {
+           "id": "6b45f3b",
+           "elType": "widget",
+           "widgetType": "heading",
+           "settings": {
+            "title": "Sophie Lammers",
+            "header_size": "div",
+            "_css_classes": "pft-author-name"
+           },
+           "elements": []
+          },
+          {
+           "id": "ca0db38",
+           "elType": "widget",
+           "widgetType": "text-editor",
+           "settings": {
+            "editor": "<p>12-Week Transformation Program</p>",
+            "_css_classes": "pft-muted"
+           },
+           "elements": []
+          }
+         ]
+        },
+        {
+         "id": "18134b9",
+         "elType": "widget",
+         "widgetType": "heading",
+         "settings": {
+          "title": "&#9733;&#9733;&#9733;&#9733;&#9733;",
+          "header_size": "div",
+          "_css_classes": "pft-stars"
+         },
+         "elements": []
+        },
+        {
+         "id": "8f38909",
+         "elType": "widget",
+         "widgetType": "text-editor",
+         "settings": {
+          "editor": "<p>&ldquo;I used to feel drained and frustrated no matter how much I tried. Rachel helped me reconnect with my body and rebuild strength without burnout. For the first time, I actually enjoy moving again &mdash; and the changes haven&rsquo;t just been physical, they&rsquo;ve been mental too.&rdquo;</p>"
+         },
+         "elements": []
+        }
+       ]
+      }
+     ]
+    },
+    {
+     "id": "77c171a",
+     "elType": "container",
+     "isInner": true,
+     "settings": {
+      "flex_direction": "column",
+      "flex_gap": {
+       "unit": "px",
+       "size": 0,
+       "column": "0",
+       "row": "0",
+       "isLinked": true
+      },
+      "padding": {
+       "unit": "px",
+       "top": "0",
+       "right": "0",
+       "bottom": "0",
+       "left": "0",
+       "isLinked": false
+      },
+      "content_width": "full",
+      "width": {
+       "unit": "%",
+       "size": 48.6,
+       "sizes": []
+      },
+      "width_tablet": {
+       "unit": "%",
+       "size": 100,
+       "sizes": []
+      },
+      "width_mobile": {
+       "unit": "%",
+       "size": 100,
+       "sizes": []
+      }
+     },
+     "elements": [
+      {
+       "id": "e38652c",
+       "elType": "widget",
+       "widgetType": "image",
+       "settings": {
+        "image": {
+         "url": "https://raw.githubusercontent.com/mariemmejri23-create/Personal-fitness-ytainer/claude/wordpress-elementor-design-4l07jm/assets/images/before-after.jpg",
+         "id": "",
+         "alt": "Before and after",
+         "source": "library"
+        },
+        "image_size": "full",
+        "_css_classes": "pft-img"
+       },
+       "elements": []
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "id": "e091fd4",
+   "elType": "container",
+   "isInner": false,
+   "settings": {
+    "flex_direction": "row",
+    "flex_gap": {
+     "unit": "px",
+     "size": 40,
+     "column": "40",
+     "row": "40",
+     "isLinked": true
+    },
+    "padding": {
+     "unit": "px",
+     "top": "96",
+     "right": "0",
+     "bottom": "64",
+     "left": "0",
+     "isLinked": false
+    },
+    "content_width": "boxed",
+    "boxed_width": {
+     "unit": "px",
+     "size": 1120,
+     "sizes": []
+    },
+    "flex_justify_content": "space-between",
+    "_element_id": "faq",
+    "flex_direction_tablet": "column",
+    "padding_tablet": {
+     "unit": "px",
+     "top": "72",
+     "right": "24",
+     "bottom": "72",
+     "left": "24",
+     "isLinked": false
+    },
+    "flex_gap_tablet": {
+     "unit": "px",
+     "size": 48,
+     "column": "48",
+     "row": "48",
+     "isLinked": true
+    },
+    "flex_direction_mobile": "column",
+    "padding_mobile": {
+     "unit": "px",
+     "top": "56",
+     "right": "20",
+     "bottom": "56",
+     "left": "20",
+     "isLinked": false
+    },
+    "flex_gap_mobile": {
+     "unit": "px",
+     "size": 40,
+     "column": "40",
+     "row": "40",
+     "isLinked": true
+    },
+    "css_classes": "pft-section pft-faq"
+   },
+   "elements": [
+    {
+     "id": "574e251",
+     "elType": "container",
+     "isInner": true,
+     "settings": {
+      "flex_direction": "column",
+      "flex_gap": {
+       "unit": "px",
+       "size": 16,
+       "column": "16",
+       "row": "16",
+       "isLinked": true
+      },
+      "padding": {
+       "unit": "px",
+       "top": "0",
+       "right": "0",
+       "bottom": "0",
+       "left": "8",
+       "isLinked": false
+      },
+      "content_width": "full",
+      "width": {
+       "unit": "%",
+       "size": 46,
+       "sizes": []
+      },
+      "flex_align_items": "flex-start",
+      "width_tablet": {
+       "unit": "%",
+       "size": 100,
+       "sizes": []
+      },
+      "width_mobile": {
+       "unit": "%",
+       "size": 100,
+       "sizes": []
+      }
+     },
+     "elements": [
+      {
+       "id": "2f1aee4",
+       "elType": "widget",
+       "widgetType": "heading",
+       "settings": {
+        "title": "FAQ",
+        "header_size": "div",
+        "_css_classes": "pft-label"
+       },
+       "elements": []
+      },
+      {
+       "id": "a7f30e2",
+       "elType": "widget",
+       "widgetType": "heading",
+       "settings": {
+        "title": "Frequently<br>Asked Questions",
+        "header_size": "h2",
+        "_css_classes": "pft-h2"
+       },
+       "elements": []
+      },
+      {
+       "id": "d431c98",
+       "elType": "widget",
+       "widgetType": "text-editor",
+       "settings": {
+        "editor": "<p>If you&rsquo;re new here or wondering what to expect, these answers will guide you through how coaching works, what&rsquo;s included, and how we tailor every plan to your needs.</p>"
+       },
+       "elements": []
+      },
+      {
+       "id": "110ed97",
+       "elType": "widget",
+       "widgetType": "button",
+       "settings": {
+        "text": "Send e-mail",
+        "link": {
+         "url": "mailto:hello@example.com",
+         "is_external": "",
+         "nofollow": ""
+        },
+        "selected_icon": {
+         "value": "fas fa-arrow-right",
+         "library": "fa-solid"
+        },
+        "icon_align": "right",
+        "size": "sm",
+        "_css_classes": "pft-btn pft-btn--outline"
+       },
+       "elements": []
+      }
+     ]
+    },
+    {
+     "id": "e3757b7",
+     "elType": "container",
+     "isInner": true,
+     "settings": {
+      "flex_direction": "column",
+      "flex_gap": {
+       "unit": "px",
+       "size": 0,
+       "column": "0",
+       "row": "0",
+       "isLinked": true
+      },
+      "padding": {
+       "unit": "px",
+       "top": "0",
+       "right": "0",
+       "bottom": "0",
+       "left": "0",
+       "isLinked": false
+      },
+      "content_width": "full",
+      "width": {
+       "unit": "%",
+       "size": 48.6,
+       "sizes": []
+      },
+      "width_tablet": {
+       "unit": "%",
+       "size": 100,
+       "sizes": []
+      },
+      "width_mobile": {
+       "unit": "%",
+       "size": 100,
+       "sizes": []
+      }
+     },
+     "elements": [
+      {
+       "id": "04d8e78",
+       "elType": "widget",
+       "widgetType": "toggle",
+       "settings": {
+        "tabs": [
+         {
+          "_id": "6b5a56c",
+          "tab_title": "What should I expect during my first session?",
+          "tab_content": "<p>We start with a relaxed conversation about your goals, history and schedule, followed by a short movement assessment. You leave with clear first steps &mdash; no pressure, no judgement.</p>"
+         },
+         {
+          "_id": "3dfa2cd",
+          "tab_title": "Do I need a gym membership?",
+          "tab_content": "<p>No. Programs can be built for a gym, a home setup with minimal equipment, or a mix of both.</p>"
+         },
+         {
+          "_id": "177b31a",
+          "tab_title": "How often should I train each week?",
+          "tab_content": "<p>Most clients train 3&ndash;4 times per week. Your plan is adapted to your energy, recovery and lifestyle.</p>"
+         },
+         {
+          "_id": "4fbbdf9",
+          "tab_title": "Is nutrition coaching included?",
+          "tab_content": "<p>Yes. Every package includes nutrition guidance, from simple fundamentals to fully personalised plans.</p>"
+         },
+         {
+          "_id": "c13dd14",
+          "tab_title": "Can I cancel or pause my plan anytime?",
+          "tab_content": "<p>Yes, you can pause or cancel at any time. Life happens &mdash; your plan should flex with it.</p>"
+         },
+         {
+          "_id": "8631828",
+          "tab_title": "How long will it take to see results?",
+          "tab_content": "<p>Most clients feel more energy within 2&ndash;3 weeks and see visible changes within 6&ndash;8 weeks of consistent training.</p>"
+         }
+        ],
+        "selected_icon": {
+         "value": "fas fa-plus",
+         "library": "fa-solid"
+        },
+        "selected_active_icon": {
+         "value": "fas fa-minus",
+         "library": "fa-solid"
+        },
+        "icon_align": "right",
+        "title_html_tag": "div"
+       },
+       "elements": []
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "id": "5a3cd62",
+   "elType": "container",
+   "isInner": false,
+   "settings": {
+    "flex_direction": "column",
+    "flex_gap": {
+     "unit": "px",
+     "size": 40,
+     "column": "40",
+     "row": "40",
+     "isLinked": true
+    },
+    "padding": {
+     "unit": "px",
+     "top": "96",
+     "right": "0",
+     "bottom": "96",
+     "left": "0",
+     "isLinked": false
+    },
+    "content_width": "boxed",
+    "boxed_width": {
+     "unit": "px",
+     "size": 1120,
+     "sizes": []
+    },
+    "_element_id": "contact",
+    "padding_tablet": {
+     "unit": "px",
+     "top": "72",
+     "right": "24",
+     "bottom": "72",
+     "left": "24",
+     "isLinked": false
+    },
+    "padding_mobile": {
+     "unit": "px",
+     "top": "56",
+     "right": "20",
+     "bottom": "56",
+     "left": "20",
+     "isLinked": false
+    },
+    "css_classes": "pft-section pft-contact"
+   },
+   "elements": [
+    {
+     "id": "cae4722",
+     "elType": "container",
+     "isInner": true,
+     "settings": {
+      "flex_direction": "column",
+      "flex_gap": {
+       "unit": "px",
+       "size": 12,
+       "column": "12",
+       "row": "12",
+       "isLinked": true
+      },
+      "padding": {
+       "unit": "px",
+       "top": "0",
+       "right": "0",
+       "bottom": "0",
+       "left": "0",
+       "isLinked": false
+      },
+      "content_width": "full"
+     },
+     "elements": [
+      {
+       "id": "63c78e1",
+       "elType": "widget",
+       "widgetType": "heading",
+       "settings": {
+        "title": "Contact",
+        "header_size": "div",
+        "_css_classes": "pft-label"
+       },
+       "elements": []
+      },
+      {
+       "id": "670a60d",
+       "elType": "widget",
+       "widgetType": "heading",
+       "settings": {
+        "title": "Let&rsquo;s build your<br>plan together!",
+        "header_size": "h2",
+        "_css_classes": "pft-h2"
+       },
+       "elements": []
+      },
+      {
+       "id": "99307db",
+       "elType": "widget",
+       "widgetType": "text-editor",
+       "settings": {
+        "editor": "<p>Have a question about training, nutrition, or which program fits you best?<br>Reach out &mdash; we&rsquo;ll help you find your next step forward.</p>"
+       },
+       "elements": []
+      }
+     ]
+    },
+    {
+     "id": "4837fb0",
+     "elType": "container",
+     "isInner": true,
+     "settings": {
+      "flex_direction": "row",
+      "flex_gap": {
+       "unit": "px",
+       "size": 32,
+       "column": "32",
+       "row": "32",
+       "isLinked": true
+      },
+      "padding": {
+       "unit": "px",
+       "top": "0",
+       "right": "0",
+       "bottom": "0",
+       "left": "0",
+       "isLinked": false
+      },
+      "content_width": "full",
+      "flex_justify_content": "space-between",
+      "flex_direction_tablet": "column",
+      "flex_direction_mobile": "column"
+     },
+     "elements": [
+      {
+       "id": "43e9d08",
+       "elType": "container",
+       "isInner": true,
+       "settings": {
+        "flex_direction": "column",
+        "flex_gap": {
+         "unit": "px",
+         "size": 16,
+         "column": "16",
+         "row": "16",
+         "isLinked": true
+        },
+        "padding": {
+         "unit": "px",
+         "top": "0",
+         "right": "0",
+         "bottom": "0",
+         "left": "0",
+         "isLinked": false
+        },
+        "content_width": "full",
+        "width": {
+         "unit": "%",
+         "size": 48.6,
+         "sizes": []
+        },
+        "width_tablet": {
+         "unit": "%",
+         "size": 100,
+         "sizes": []
+        },
+        "width_mobile": {
+         "unit": "%",
+         "size": 100,
+         "sizes": []
+        }
+       },
+       "elements": [
+        {
+         "id": "8c5bbc1",
+         "elType": "container",
+         "isInner": true,
+         "settings": {
+          "flex_direction": "column",
+          "flex_gap": {
+           "unit": "px",
+           "size": 24,
+           "column": "24",
+           "row": "24",
+           "isLinked": true
+          },
+          "padding": {
+           "unit": "px",
+           "top": "24",
+           "right": "24",
+           "bottom": "24",
+           "left": "24",
+           "isLinked": false
+          },
+          "content_width": "full",
+          "flex_justify_content": "space-between",
+          "min_height": {
+           "unit": "px",
+           "size": 228,
+           "sizes": []
+          },
+          "_flex_size": "grow",
+          "css_classes": "pft-contact-card"
+         },
+         "elements": [
+          {
+           "id": "e391ede",
+           "elType": "widget",
+           "widgetType": "icon",
+           "settings": {
+            "selected_icon": {
+             "value": "far fa-comments",
+             "library": "fa-regular"
+            },
+            "align": "left"
+           },
+           "elements": []
+          },
+          {
+           "id": "bfed06e",
+           "elType": "container",
+           "isInner": true,
+           "settings": {
+            "flex_direction": "row",
+            "flex_gap": {
+             "unit": "px",
+             "size": 16,
+             "column": "16",
+             "row": "16",
+             "isLinked": true
+            },
+            "padding": {
+             "unit": "px",
+             "top": "0",
+             "right": "0",
+             "bottom": "0",
+             "left": "0",
+             "isLinked": false
+            },
+            "content_width": "full",
+            "flex_align_items": "flex-end",
+            "flex_justify_content": "space-between"
+           },
+           "elements": [
+            {
+             "id": "11b9c3f",
+             "elType": "container",
+             "isInner": true,
+             "settings": {
+              "flex_direction": "column",
+              "flex_gap": {
+               "unit": "px",
+               "size": 4,
+               "column": "4",
+               "row": "4",
+               "isLinked": true
+              },
+              "padding": {
+               "unit": "px",
+               "top": "0",
+               "right": "0",
+               "bottom": "0",
+               "left": "0",
+               "isLinked": false
+              },
+              "content_width": "full",
+              "_flex_size": "grow"
+             },
+             "elements": [
+              {
+               "id": "9f61018",
+               "elType": "widget",
+               "widgetType": "heading",
+               "settings": {
+                "title": "Chat",
+                "header_size": "h3",
+                "_css_classes": "pft-h3"
+               },
+               "elements": []
+              },
+              {
+               "id": "92b710f",
+               "elType": "widget",
+               "widgetType": "text-editor",
+               "settings": {
+                "editor": "<p>Chat directly with coach Rachel</p>",
+                "_css_classes": "pft-muted"
+               },
+               "elements": []
+              }
+             ]
+            },
+            {
+             "id": "3d91c42",
+             "elType": "widget",
+             "widgetType": "button",
+             "settings": {
+              "text": "",
+              "link": {
+               "url": "#",
+               "is_external": "",
+               "nofollow": ""
+              },
+              "selected_icon": {
+               "value": "fas fa-arrow-right",
+               "library": "fa-solid"
+              },
+              "icon_align": "right",
+              "size": "sm",
+              "_css_classes": "pft-arrow"
+             },
+             "elements": []
+            }
+           ]
+          }
+         ]
+        },
+        {
+         "id": "786b048",
+         "elType": "container",
+         "isInner": true,
+         "settings": {
+          "flex_direction": "column",
+          "flex_gap": {
+           "unit": "px",
+           "size": 24,
+           "column": "24",
+           "row": "24",
+           "isLinked": true
+          },
+          "padding": {
+           "unit": "px",
+           "top": "24",
+           "right": "24",
+           "bottom": "24",
+           "left": "24",
+           "isLinked": false
+          },
+          "content_width": "full",
+          "flex_justify_content": "space-between",
+          "min_height": {
+           "unit": "px",
+           "size": 228,
+           "sizes": []
+          },
+          "_flex_size": "grow",
+          "css_classes": "pft-contact-card"
+         },
+         "elements": [
+          {
+           "id": "263ab6f",
+           "elType": "widget",
+           "widgetType": "icon",
+           "settings": {
+            "selected_icon": {
+             "value": "fas fa-phone-alt",
+             "library": "fa-solid"
+            },
+            "align": "left"
+           },
+           "elements": []
+          },
+          {
+           "id": "2d2a9a9",
+           "elType": "container",
+           "isInner": true,
+           "settings": {
+            "flex_direction": "row",
+            "flex_gap": {
+             "unit": "px",
+             "size": 16,
+             "column": "16",
+             "row": "16",
+             "isLinked": true
+            },
+            "padding": {
+             "unit": "px",
+             "top": "0",
+             "right": "0",
+             "bottom": "0",
+             "left": "0",
+             "isLinked": false
+            },
+            "content_width": "full",
+            "flex_align_items": "flex-end",
+            "flex_justify_content": "space-between"
+           },
+           "elements": [
+            {
+             "id": "2425b74",
+             "elType": "container",
+             "isInner": true,
+             "settings": {
+              "flex_direction": "column",
+              "flex_gap": {
+               "unit": "px",
+               "size": 4,
+               "column": "4",
+               "row": "4",
+               "isLinked": true
+              },
+              "padding": {
+               "unit": "px",
+               "top": "0",
+               "right": "0",
+               "bottom": "0",
+               "left": "0",
+               "isLinked": false
+              },
+              "content_width": "full",
+              "_flex_size": "grow"
+             },
+             "elements": [
+              {
+               "id": "e1c0e91",
+               "elType": "widget",
+               "widgetType": "heading",
+               "settings": {
+                "title": "Call us",
+                "header_size": "h3",
+                "_css_classes": "pft-h3"
+               },
+               "elements": []
+              },
+              {
+               "id": "b0c31bf",
+               "elType": "widget",
+               "widgetType": "text-editor",
+               "settings": {
+                "editor": "<p>Mon - Fri, 8:00 - 17:00 (CET)</p>",
+                "_css_classes": "pft-muted"
+               },
+               "elements": []
+              }
+             ]
+            },
+            {
+             "id": "987ab7a",
+             "elType": "widget",
+             "widgetType": "button",
+             "settings": {
+              "text": "",
+              "link": {
+               "url": "tel:+10000000000",
+               "is_external": "",
+               "nofollow": ""
+              },
+              "selected_icon": {
+               "value": "fas fa-arrow-right",
+               "library": "fa-solid"
+              },
+              "icon_align": "right",
+              "size": "sm",
+              "_css_classes": "pft-arrow"
+             },
+             "elements": []
+            }
+           ]
+          }
+         ]
+        }
+       ]
+      },
+      {
+       "id": "f9717d9",
+       "elType": "container",
+       "isInner": true,
+       "settings": {
+        "flex_direction": "column",
+        "flex_gap": {
+         "unit": "px",
+         "size": 20,
+         "column": "20",
+         "row": "20",
+         "isLinked": true
+        },
+        "padding": {
+         "unit": "px",
+         "top": "0",
+         "right": "0",
+         "bottom": "0",
+         "left": "0",
+         "isLinked": false
+        },
+        "content_width": "full",
+        "width": {
+         "unit": "%",
+         "size": 48.6,
+         "sizes": []
+        },
+        "width_tablet": {
+         "unit": "%",
+         "size": 100,
+         "sizes": []
+        },
+        "width_mobile": {
+         "unit": "%",
+         "size": 100,
+         "sizes": []
+        }
+       },
+       "elements": [
+        {
+         "id": "3b9f218",
+         "elType": "widget",
+         "widgetType": "heading",
+         "settings": {
+          "title": "Send a Message",
+          "header_size": "h3",
+          "_css_classes": "pft-form-title"
+         },
+         "elements": []
+        },
+        {
+         "id": "db04bd4",
+         "elType": "widget",
+         "widgetType": "html",
+         "settings": {
+          "html": "<div class=\"pft-form-wrap\">\n<form class=\"pft-form\" action=\"mailto:hello@example.com\" method=\"post\" enctype=\"text/plain\">\n  <div><label for=\"pft-name\">Full name</label>\n    <input id=\"pft-name\" name=\"name\" type=\"text\" placeholder=\"Enter your full name\" required></div>\n  <div><label for=\"pft-email\">Email</label>\n    <input id=\"pft-email\" name=\"email\" type=\"email\" placeholder=\"hello@example.com\" required></div>\n  <div><label for=\"pft-message\">Message</label>\n    <textarea id=\"pft-message\" name=\"message\" placeholder=\"Tell me about your goals or what you&rsquo;d like help with...\"></textarea></div>\n  <button type=\"submit\">Send Message <span class=\"pft-form-arrow\">&rarr;</span></button>\n</form>\n</div>"
+         },
+         "elements": []
+        }
+       ]
+      }
+     ]
+    }
+   ]
+  }
+ ]
+}
